@@ -245,18 +245,17 @@ function addCreatorsData(name, image, index, initial = false) {
 		// Fallback to compressed if no image name is provided
 		imgPath = "creators/compressed/" + name.toLowerCase() + ".jpg";
 	}
-	$("#creators-container").append(`
-		<div class="creator-box pointer-events-all" index="${index}" ${
-		initial ? "" : `style="height:0px;"`
-	}>
-			<img
-				src="assets/images/${imgPath}"
-				alt="${name}"
-				class="creator-img"
-			/>
-			<div class="creator-name">${name}</div>
-		</div>
-	`);
+	   $("#creators-container").append(`
+		   <div class="creator-box pointer-events-all" index="${index}" ${
+		   initial ? "" : `style="height:0px;"`
+	   }>
+			   <img
+				   src="assets/images/${imgPath}"
+				   alt="Creator image"
+				   class="creator-img"
+			   />
+		   </div>
+	   `);
 }
 
 function addAboutData(title, detail) {
