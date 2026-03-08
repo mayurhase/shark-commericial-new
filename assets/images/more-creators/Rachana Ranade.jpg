@@ -1,0 +1,4184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+		<meta
+			name="description"
+			content="One of the top influencer marketing and talent management agencies across India. We foster the growth of brands and influencers in the competitive growing market through creative collaborations"
+		/>
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://socialtagindia.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="SocialTAG" />
+		<meta
+			property="og:description"
+			content="One of the top influencer marketing and talent management agencies across India. We foster the growth of brands and influencers in the competitive growing market through creative collaborations"
+		/>
+		<meta property="og:image" content="https://i.imgur.com/LOYouse.jpg" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:domain" content="social-tag.netlify.app" />
+		<meta property="twitter:url" content="https://socialtagindia.com/" />
+		<meta name="twitter:title" content="SocialTAG" />
+		<meta
+			name="twitter:description"
+			content="One of the top influencer marketing and talent management agencies across India. We foster the growth of brands and influencers in the competitive growing market through creative collaborations"
+		/>
+		<meta name="twitter:image" content="https://i.imgur.com/LOYouse.jpg" />
+
+		<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+		<link
+			rel="preload"
+			href="assets/gifs/logo.gif"
+			as="image"
+			type="image/gif"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.min.js"
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+			integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"
+			integrity="sha512-14AZ/DxUrlF26z6v7egDkpJHKyJRn/7ue2BgpWZ/fmqrqVzf4PrQnToy99sHmKwzKev/VZ1tjPxusuTV/n8CcQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script> -->
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"
+			integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.1.21/tilt.jquery.min.js" integrity="sha512-zHvEsOKUsx5l+X8JJc4s8P8nkcvS6SVbKyXYtyRjnppRr/h7y/0VNbhNsV42n++s8nnKiCzZ7XCxkETKmPeycQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" integrity="sha512-u1L7Dp3BKUP3gijgSRoMTNxmDl/5o+XOHupwwa7jsI1rMzHrllSLKsGOfqjYl8vrEG+8ghnRPNA/SCltmJCZpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+			integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
+		<script src="libs/libgif.js"></script>
+		<script defer src="mail.js"></script>
+		<script defer src="message.js"></script>
+		<script defer src="data2.js"></script>
+		<title>SocialTAG</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			/* Fix overlay positioning and styling */
+			#ab4-detail-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				z-index: 9999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease, visibility 0.3s ease;
+			}
+
+			#ab4-detail-overlay.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			#ab4-detail-card {
+				position: relative;
+				max-width: 90%;
+				max-height: 90%;
+				width: 600px;
+				background: #1a1a1a;
+				border-radius: 12px;
+				padding: 2rem;
+				margin: 1rem;
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+				border: 1px solid #333;
+				overflow-y: auto;
+			}
+
+			#ab4-detail-close {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				width: 24px;
+				height: 24px;
+				cursor: pointer;
+				z-index: 10000;
+				opacity: 0.7;
+				transition: opacity 0.2s ease;
+			}
+
+			#ab4-detail-close:hover {
+				opacity: 1;
+			}
+
+			#ab4-detail-title {
+				color: #ff2868;
+				font-size: 1.5rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+				padding-right: 2rem;
+			}
+
+			#ab4-detail-text {
+				color: #ffffff;
+				font-size: 1rem;
+				line-height: 1.6;
+			}
+
+			/* Ensure overlay is initially hidden */
+			#ab4-detail-overlay:not(.active) {
+				display: none !important;
+			}
+
+			/* Mobile responsiveness for overlay */
+			@media (max-width: 768px) {
+				#ab4-detail-card {
+					width: 95%;
+					padding: 1.5rem;
+					margin: 0.5rem;
+				}
+
+				#ab4-detail-title {
+					font-size: 1.25rem;
+				}
+
+				#ab4-detail-text {
+					font-size: 0.9rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bg-grid"></div>
+		<div id="logo-anim">
+			<img
+				id="logo-gif"
+				rel:auto_play="0"
+				src="assets/gifs/logo.gif"
+				alt="Social Tag Logo Animation"
+			/>
+		</div>
+		<div id="header">
+			<img
+				src="assets/images/logo.png"
+				alt="Social Tag Logo"
+				id="logo"
+				class="hover-pointer"
+			/>
+			<div id="menu-icon">
+				<div class="menu-icon-line"></div>
+				<div class="menu-icon-line"></div>
+			</div>
+			<img
+				src="assets/images/circle.png"
+				alt="Circle Stroke Doodle"
+				id="menu-circle"
+			/>
+		</div>
+		<div id="menu">
+			<div id="menu-items-container" class="hover-pointer-all">
+				<span class="menu-item selected-menu-item" index="0">Home</span>
+
+				<span class="menu-item" index="2">About</span>
+				<!-- <span class="menu-item" index="3">What We Do</span>
+				<span class="menu-item" index="4">Why SocialTag</span> -->
+				<span class="menu-item" index="5">Brands</span>
+				<span class="menu-item" index="6">Creators</span>
+				<span class="menu-item" index="7">Contact</span>
+				<!-- <a
+					href="https://forms.gle/D8yEkTrw7HeMf1Am6"
+					target="_blank"
+					class="menu-item"
+					>Career</a
+				> -->
+			</div>
+		</div>
+		<button id="cta-button">Get Social</button>
+		<main id="body-content">
+			<div id="section-nav">
+				<img
+					class="arrow"
+					id="up-arrow"
+					src="assets/images/arrow.png"
+					alt="Up Navigation Arrow"
+				/>
+				<img
+					class="arrow"
+					id="down-arrow"
+					src="assets/images/arrow.png"
+					alt="Down Navigation Arrow"
+				/>
+			</div>
+			<section id="home1" class="pointer-events-all">
+				<h1>We're not an agency</h1>
+				<p style="margin-top: 2rem">
+					We're the architects of the new attention economy<red
+						>.</red
+					>
+				</p>
+				<!-- <h3 class="subtext">
+					SocialTag began as a talent-first agency. We've evolved into a media powerhouse that partners with creators, companies, and capital.
+				</h3> -->
+			</section>
+			<!-- <section id="mission" class="pointer-events-all">
+				<div id="mission-content">
+					<h1 id="mission-title">Our Mission</h1>
+					<p id="mission-statement">To shape narratives that spark movements.</p>
+					<p id="mission-subtext">
+						We believe creators are the new media. And we know how to use that power to grow businesses that matter.
+					</p>
+				</div>
+			</section> -->
+
+			<section id="home2" class="pointer-events-all">
+				<h2>SocialTag began as a talent-first agency.</h2>
+				<h1>
+					<!-- Expand the <fill>reach</fill> of your brand across various
+					<fill>social media</fill> platforms. -->
+
+					<fill
+						>Evolving into a media powerhouse partnering with
+						creators, companies, and capital.</fill
+					>
+				</h1>
+				<div id="h2-icons">
+					<img
+						class="h2-icon"
+						id="yt-icon"
+						src="assets/images/social-icons/youtube.png"
+						alt="Youtube Icon"
+					/>
+					<img
+						class="h2-icon"
+						id="ig-icon"
+						src="assets/images/social-icons/instagram.png"
+						alt="Instagram Icon"
+					/>
+					<img
+						class="h2-icon"
+						id="li-icon"
+						src="assets/images/social-icons/linkedin.png"
+						alt="Linkedin.png Icon"
+					/>
+					<img
+						class="h2-icon"
+						id="tw-icon"
+						src="assets/images/social-icons/twitter.png"
+						alt="Twitter Icon"
+					/>
+				</div>
+			</section>
+			<!-- <section id="home3" class="pointer-events-all">
+				<div id="services-grid" class="multibox-grid">
+					<div class="service-box">
+						<div class="service-title">Content Title</div>
+						<div class="service-detail">Service Long Detail...</div>
+					</div>
+					<div class="service-box">
+						<div class="service-title">Content Title</div>
+						<div class="service-detail">Service Long Detail...</div>
+					</div>
+					<div class="service-box">
+						<div class="service-title">Content Title</div>
+						<div class="service-detail">Service Long Detail...</div>
+					</div>
+					<div class="service-box">
+						<div class="service-title">Content Title</div>
+						<div class="service-detail">Service Long Detail...</div>
+					</div>
+					<div class="service-box">
+						<div class="service-title">Content Title</div>
+						<div class="service-detail">Service Long Detail...</div>
+					</div>
+					<div class="service-box">
+						<div class="service-title">Content Title</div>
+						<div class="service-detail">Service Long Detail...</div>
+					</div>
+				</div>
+			</section> -->
+			<section id="about" class="pointer-events-all">
+				<div id="about-left-content">
+					<div id="about-lc-title">
+						Take your business to the next level with SocialTAG
+					</div>
+					<div id="about-lc-detail">
+						SocialTAG is one of the top influencer marketing and
+						talent management agencies across India. We foster the
+						growth of brands and influencers in the competitive
+						growing market through creative collaborations,
+						executing remarkable campaigns on different platforms
+						and managing exclusive talent across various industries.
+					</div>
+				</div>
+				<div
+					id="social-media-card"
+					data-tilt-glare="true"
+					data-tilt-max-glare="1"
+				>
+					<div id="smc-frame">
+						<!-- <div id="smc-person">
+							<div id="smc-head-1" class="smc-head"></div>
+							<div id="smc-person-body"></div>
+							<div id="smc-head-2" class="smc-head"></div>
+						</div>
+						<div id="smc-title">Your Profile</div> -->
+						<img
+							class="smc-image"
+							src="assets/images/social-icons/flat/instagram.webp"
+							alt="instagram"
+						/>
+						<div class="smc-blur"></div>
+						<img
+							class="smc-bg-image"
+							src="assets/images/social-icons/flat/instagram.webp"
+							alt="instagram"
+						/>
+						<script>
+							const images = [
+								"assets/images/social-icons/flat/instagram.webp",
+								"assets/images/social-icons/flat/youtube.webp",
+								"assets/images/social-icons/flat/meta.png",
+							];
+
+							// Select the image elements
+							const fgImage =
+								document.querySelector(".smc-image");
+							const bgImage =
+								document.querySelector(".smc-bg-image");
+
+							// Set transition styles for fade effect
+							fgImage.style.transition =
+								"opacity 0.5s ease-in-out";
+							bgImage.style.transition =
+								"opacity 0.5s ease-in-out";
+
+							// Ensure initial opacity is 1
+							fgImage.style.opacity = 1;
+							bgImage.style.opacity = 1;
+
+							// Current index in the array
+							let currentIndex = 0;
+
+							// Variable to store the interval ID
+							let smcInterval = null;
+
+							// Callable function to change images with fade
+							function changeImages() {
+								// Fade out
+								fgImage.style.opacity = 0;
+								bgImage.style.opacity = 0;
+
+								// Wait for fade out to complete
+								setTimeout(() => {
+									// Update index
+									currentIndex =
+										(currentIndex + 1) % images.length;
+									const newSrc = images[currentIndex];
+
+									// Extract alt text from filename
+									const altName = newSrc
+										.split("/")
+										.pop()
+										.split(".")[0];
+
+									// Change sources and alt
+									fgImage.src = newSrc;
+									bgImage.src = newSrc;
+									fgImage.alt = altName;
+									bgImage.alt = altName;
+
+									// Fade in
+									fgImage.style.opacity = 1;
+									bgImage.style.opacity = 1;
+								}, 500);
+							}
+
+							// Function to start the image rotation
+							function startSMCAnimation() {
+								// Call immediately and then every 5 seconds
+								changeImages();
+								smcInterval = setInterval(changeImages, 5000);
+							}
+
+							// Function to stop the image rotation (cleanup)
+							function stopSMCAnimation() {
+								if (smcInterval) {
+									clearInterval(smcInterval);
+									smcInterval = null;
+								}
+							}
+						</script>
+					</div>
+					<div id="smc-content">
+						<div id="smc-row-1">
+							<img
+								id="smc-heart"
+								src="assets/images/heart.svg"
+								alt="Heart Icon"
+							/>
+							<div id="smc-r1-box" class="smc-placeholder-box">
+								<div id="smc-counter">0</div>
+								<script>
+									let animationVersion = 0;
+
+									function formatNumber(num) {
+										if (num < 1000) {
+											return num.toString();
+										}
+										const tiers = [
+											{ divisor: 1000, suffix: "K" },
+											{ divisor: 1000000, suffix: "M" },
+											{
+												divisor: 1000000000,
+												suffix: "B",
+											},
+										];
+										const tier = tiers.reduce(
+											(prev, curr) =>
+												num >= curr.divisor
+													? curr
+													: prev
+										);
+										const value = num / tier.divisor;
+										let formatted;
+										if (value < 100) {
+											formatted = value.toFixed(1);
+											if (formatted.endsWith(".0")) {
+												formatted = formatted.slice(
+													0,
+													-2
+												);
+											}
+										} else {
+											formatted =
+												Math.round(value).toString();
+										}
+										return formatted + tier.suffix;
+									}
+
+									function startSMCCounter(durationMs) {
+										const target = 1000000000;
+										const element =
+											document.getElementById(
+												"smc-counter"
+											);
+										if (!element) return;
+
+										animationVersion++;
+										const currentVersion = animationVersion;
+
+										element.textContent = "0"; // Reset to 0
+
+										const startTime = performance.now();
+
+										function animate(currentTime) {
+											if (
+												currentVersion !==
+												animationVersion
+											)
+												return; // Stop if version changed
+
+											const elapsed =
+												currentTime - startTime;
+											const linearProgress = Math.min(
+												elapsed / durationMs,
+												1
+											);
+											const easedProgress =
+												linearProgress * linearProgress; // Quadratic ease-in
+											const currentValue = Math.round(
+												easedProgress * target
+											);
+											element.textContent =
+												formatNumber(currentValue);
+
+											if (linearProgress < 1) {
+												requestAnimationFrame(animate);
+											}
+										}
+
+										requestAnimationFrame(animate);
+									}
+
+									// Example: Call startSMCCounter(5000); to animate over 5 seconds.
+								</script>
+							</div>
+						</div>
+						<div id="smc-row-2" class="smc-placeholder-box">
+							Reach masses
+						</div>
+						<div id="smc-row-3" class="smc-placeholder-box">
+							#socialtag
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section id="about2" class="pointer-events-all">
+				<div id="process"></div>
+			</section> -->
+			<section id="about3">
+				<div id="ab3-main">
+					<p id="ab3-title" class="pointer-events">Why Social Tag</p>
+					<div class="swiper ab3-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="ab3-card">
+									<div class="ab3-card-title">
+										🔗 Built on Trust
+									</div>
+									<div class="ab3-card-text">
+										We earned our reputation before we ever
+										optimized for it. Referrals.
+										Relationships. Results. That's how we
+										grew.
+									</div>
+								</div>
+							</div>
+							<!-- <div class="swiper-slide">
+									<div class="ab3-card">
+										<div class="ab3-card-title">Identify</div>
+										<div class="ab3-card-text">
+											Search for the category & brand specific
+											influencers to reach the right audience.
+										</div>
+									</div>
+								</div> -->
+							<div class="swiper-slide">
+								<div class="ab3-card">
+									<div class="ab3-card-title">
+										🎯 Industry Fluency
+									</div>
+									<div class="ab3-card-text">
+										From SaaS funnels to pre-IPO narratives
+										we get your business, not just your
+										Instagram handle.
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="ab3-card">
+									<div class="ab3-card-title">
+										📈 Long Term Relevance
+									</div>
+									<div class="ab3-card-text">
+										We turn attention into action with
+										content that aligns with your long-term
+										brand story not just a 24-hour spike.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="ab3-controls" class="pointer-events">
+						<img
+							src="assets/images/about-icons/target.svg"
+							alt="Target"
+							class="ab3-icon"
+						/>
+						<img
+							src="assets/images/about-icons/search.svg"
+							alt="Search"
+							class="ab3-icon active"
+						/>
+						<img
+							src="assets/images/about-icons/amplify.svg"
+							alt="Amplify"
+							class="ab3-icon"
+						/>
+						<img
+							src="assets/images/about-icons/track.svg"
+							alt="Track"
+							class="ab3-icon"
+						/>
+					</div>
+					<div id="pc-ab3-cards" style="padding: 1rem">
+						<div class="ab3-card d-hover">
+							<div class="ab3-card-title">🔗 Built on Trust</div>
+							<div class="ab3-card-text">
+								We earned our reputation before we ever
+								optimized for it. Referrals. Relationships.
+								Results. That's how we grew.
+							</div>
+						</div>
+						<div class="ab3-card d-hover">
+							<div class="ab3-card-title">
+								🎯 Industry Fluency
+							</div>
+							<div class="ab3-card-text">
+								From SaaS funnels to pre-IPO narratives we get
+								your business, not just your Instagram handle.
+							</div>
+						</div>
+						<!-- <div class="ab3-card">
+								<div class="ab3-card-title">Amplify</div>
+								<div class="ab3-card-text">
+									Mobilise influencers to create optimised content
+									that achieves the set objectives.
+								</div>
+							</div> -->
+						<div class="ab3-card d-hover">
+							<div class="ab3-card-title">
+								📈 Long Term Relevance
+							</div>
+							<div class="ab3-card-text">
+								We turn attention into action with content that
+								aligns with your long-term brand story not just
+								a 24-hour spike.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="about4">
+				<div id="ab4-main">
+					<div id="ab4-title-container" class="pointer-events-all">
+						<div id="ab4-left-icon">
+							<img
+								class="ab4-title-icon"
+								src="assets/images/verified-check-pink.png"
+								alt=""
+							/>
+						</div>
+
+						<div id="ab4-title">
+							<div id="ab4-subtitle ">
+								A New Age Media Company partnering with Brands
+								Shaping the Future
+							</div>
+							<!-- <div id="ab4-subtitle ">We partner with</div> -->
+						</div>
+						<div id="ab4-right-icon">
+							<img
+								class="ab4-title-icon"
+								src="assets/images/verified-check-pink.png"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div id="ab4-list" class="pointer-events-all">
+						<div
+							class="ab4-li d-hover"
+							data-title="🧠 AI tools, global SaaS platforms"
+							data-detail="
+						We simplify complex tools into stories users care about.
+						Creators break down your value, drive adoption, and build loyal early believers.
+						"
+						>
+							<div class="service-title">
+								🧠 AI tools, global SaaS platforms
+							</div>
+							<div class="service-detail">
+								We simplify complex tools into stories users
+								care about. Creators break down your value,
+								drive adoption, and build loyal early believers.
+							</div>
+						</div>
+						<div
+							class="ab4-li d-hover"
+							data-title="🏙️ Real Estate & Capital Market Buzz"
+							data-detail="
+						From luxury living to public listings
+						we build pre-market narratives using high-trust creators who move public perception."
+						>
+							<div class="service-title">
+								🏙️ Real Estate & Capital Market Buzz
+							</div>
+							<div class="service-detail">
+								From luxury living to public listings we build
+								pre-market narratives using high-trust creators
+								who move public perception.
+							</div>
+						</div>
+						<div
+							class="ab4-li d-hover"
+							data-title="
+						🎤 Strategic Creator Matchmaking"
+							data-detail="We don’t do spreadsheets. We do curation. We pair brands with creators who understand the industry, not just trends on Reels."
+						>
+							<div class="service-title">
+								🎤 Strategic Creator Matchmaking
+							</div>
+							<div class="service-detail">
+								We don’t do spreadsheets. We do curation. We
+								pair brands with creators who understand the
+								industry, not just trends on Reels.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ab4-detail-overlay">
+					<div id="ab4-detail-card" class="service-box">
+						<img
+							src="assets/images/cross.png"
+							alt="cross icon"
+							id="ab4-detail-close"
+							class="hover-pointer"
+						/>
+						<div class="service-title" id="ab4-detail-title"></div>
+						<div class="service-detail" id="ab4-detail-text"></div>
+					</div>
+				</div>
+			</section>
+			<!-- <section id="about5" >
+				
+					<div id="ab5-main" >
+						<div id="ab5-title-container" class="pointer-events-all">
+							<div id="ab5-title">Why SocialTag</div>
+						</div>
+						<div id="ab5-list" class="swiper ab5-slider" >
+							<div class="service-box ab5-li swiper-slide">
+								<span class="ab5-li-icon">🔗</span>
+								<div class="ab5-li-content" >
+									<div class="ab5-li-title">Built on Trust</div>
+									<div class="ab5-li-detail">We earned our reputation before we ever optimized for it. Referrals. Relationships. Results. That's how we grew — long before the algorithms caught on.</div>
+								</div>
+							</div>
+							<div class="service-box ab5-li swiper-slide">
+								<span class="ab5-li-icon">🎯</span>
+								<div class="ab5-li-content">
+									<div class="ab5-li-title">Industry Fluency</div>
+									<div class="ab5-li-detail">From SaaS funnels to pre-IPO narratives we get your business, not just your Instagram handle.</div>
+								</div>
+							</div>
+							<div class="service-box ab5-li swiper-slide">
+								<span class="ab5-li-icon">📈</span>
+								<div class="ab5-li-content">
+									<div class="ab5-li-title">Not Just Reach. Relevance.</div>
+									<div class="ab5-li-detail">We turn attention into action with content that aligns with your long-term brand story not just a 24-hour spike.</div>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</section> -->
+			<section id="brands" class="pointer-events-all">
+				<div id="brands-title">Brands we've worked with</div>
+				<div class="marquee-container marquee-top">
+					<div class="marquee-content"></div>
+				</div>
+				<div class="marquee-container marquee-bottom">
+					<div class="marquee-content"></div>
+				</div>
+			</section>
+
+			<!-- <section id="case-studies" class="pointer-events-all">
+				<img
+					id="cs-exit"
+					src="assets/images/arrow.png"
+					alt="Exit Case Studies"
+				/>
+				<div id="cs-menu" class="only-child-pointer-events">
+					<div id="case-studies-header">
+						<p id="cs-title">Case Studies</p>
+						<p id="cs-subtitle">Platform Specific</p>
+					</div>
+					<div id="cs-types">
+						<div class="cs-type-box" data-category="instagram">
+							Instagram
+						</div>
+						<div class="cs-type-box" data-category="youtube">
+							YouTube
+						</div>
+						<div class="cs-type-box" data-category="linkedin">
+							LinkedIn
+						</div>
+						<div class="cs-type-box" data-category="twitter">
+							Twitter
+						</div>
+					</div>
+				</div>
+				<div class="cs-loader">
+					<div class="loader">
+						<svg class="circular-loader" viewBox="25 25 50 50">
+							<circle
+								class="loader-path"
+								cx="50"
+								cy="50"
+								r="20"
+								fill="none"
+								stroke="#ff2868"
+								stroke-width="2.5"
+							/>
+						</svg>
+					</div>
+				</div>
+				<div id="cs-content-1" class="only-child-pointer-events">
+					<div id="cs-content-1-logos">
+						<img
+							src=""
+							alt="Collab Brand Logo"
+							id="cs-content-1-collab-logo"
+						/>
+						x
+						<img
+							src="assets/images/logo.png"
+							alt="Social Tag Logo"
+						/>
+					</div>
+					<div id="cs-content-1-stats">
+						<div class="cs-content-1-stat-item">
+							<div>
+								<img
+									src="assets/images/cs-icons/check.svg"
+									alt=""
+								/>
+								<p id="cs-1-influencers">5</p>
+							</div>
+							<p>No. of influencers</p>
+						</div>
+						<div class="cs-content-1-stat-item">
+							<div>
+								<img
+									src="assets/images/cs-icons/eye.svg"
+									alt=""
+								/>
+								<p id="cs-1-reach">893K</p>
+							</div>
+							<p>Campaign Reach</p>
+						</div>
+						<div class="cs-content-1-stat-item">
+							<div>
+								<img
+									id="cs-1-platform-icon"
+									src="assets/images/cs-icons/instagram.svg"
+									alt=""
+								/>
+								<p id="cs-1-platform">Insta</p>
+							</div>
+							<p>Campaign Platform</p>
+						</div>
+						<div class="cs-content-1-stat-item">
+							<div>
+								<img
+									src="assets/images/cs-icons/coins.svg"
+									alt=""
+								/>
+								<p id="cs-1-cpv">0.78</p>
+							</div>
+							<p>CPV</p>
+						</div>
+					</div>
+					<div id="cs-content-1-media">
+						<img src="" alt="" />
+					</div>
+				</div>
+				<div id="cs-content-2" class="only-child-pointer-events">
+					<div id="cs-content-2-logos">
+						<img
+							src=""
+							alt="Collab Brand Logo"
+							id="cs-content-2-collab-logo"
+						/>
+						x
+						<img
+							src="assets/images/logo.png"
+							alt="Social Tag Logo"
+						/>
+					</div>
+					<div id="cs-content-2-bottom-panel">
+						<div id="cs-content-2-stats">
+							<div class="cs-content-2-stat-item">
+								<div>
+									<img
+										src="assets/images/cs-icons/check.svg"
+										alt=""
+									/>
+									<p id="cs-2-influencers">5</p>
+								</div>
+								<p>No. of influencers</p>
+							</div>
+							<div class="cs-content-2-stat-item">
+								<div>
+									<img
+										src="assets/images/cs-icons/eye.svg"
+										alt=""
+									/>
+									<p id="cs-2-reach">893K</p>
+								</div>
+								<p>Campaign Reach</p>
+							</div>
+							<div class="cs-content-2-stat-item">
+								<div>
+									<img
+										id="cs-2-platform-icon"
+										src="assets/images/cs-icons/instagram.svg"
+										alt=""
+									/>
+
+									<p id="cs-2-platform">Insta</p>
+								</div>
+								<p>Campaign Platform</p>
+							</div>
+							<div class="cs-content-2-stat-item">
+								<div>
+									<img
+										src="assets/images/cs-icons/coins.svg"
+										alt=""
+									/>
+									<p id="cs-2-cpv">0.78</p>
+								</div>
+								<p>CPV</p>
+							</div>
+						</div>
+						<div id="cs-content-2-media">
+							<div
+								id="cs-mobile-videos"
+								class="hover-pointer-all"
+							>
+								<a href="">
+									<div class="cs-mobile-video">
+										<div class="cs-mobile-video-cover">
+											<img
+												src="assets/images/misc/mobile-frame.png"
+												alt=""
+											/>
+										</div>
+										<p>Click here to see</p>
+									</div>
+								</a>
+								<a href="">
+									<div class="cs-mobile-video">
+										<div class="cs-mobile-video-cover">
+											<img
+												src="assets/images/misc/mobile-frame.png"
+												alt=""
+											/>
+										</div>
+										<p>Click here to see</p>
+									</div>
+								</a>
+								<a href="">
+									<div class="cs-mobile-video">
+										<div class="cs-mobile-video-cover">
+											<img
+												src="assets/images/misc/mobile-frame.png"
+												alt=""
+											/>
+										</div>
+										<p>Click here to see</p>
+									</div>
+								</a>
+								<a href="">
+									<div class="cs-mobile-video">
+										<div class="cs-mobile-video-cover">
+											<img
+												src="assets/images/misc/mobile-frame.png"
+												alt=""
+											/>
+										</div>
+										<p>Click here to see</p>
+									</div>
+								</a>
+
+								<div class="cs-mobile-video-cover">
+										<img
+											src="assets/images/misc/wallpaper.jpeg"
+											alt=""
+										/>
+									</div>
+									<div class="cs-mobile-video-cover">
+										<img
+											src="assets/images/misc/wallpaper.jpeg"
+											alt=""
+										/>
+									</div>
+									<div class="cs-mobile-video-cover">
+										<img
+											src="assets/images/misc/wallpaper.jpeg"
+											alt=""
+										/>
+									</div>
+							</div>
+							<div id="cs-2-image"></div>
+							<div id="cs-content-2-bottom-data">
+								<div>
+									<img
+										src="assets/images/cs-icons/like.svg"
+										alt=""
+									/>
+									<p id="cs-content-2-like-count">16K+</p>
+									Likes
+								</div>
+								<div>
+									<img
+										src="assets/images/cs-icons/calendar.svg"
+										alt=""
+									/>
+									<p id="cs-content-2-turnaround">4 Days</p>
+									Turnaround
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+			<section id="creators">
+				<div id="creators-title">Talent Network</div>
+				<div id="creators-container">
+					<div id="creator-page-controls">
+						<div
+							class="creator-page-control"
+							id="creator-page-prev"
+							onclick="creatorsPrevious()"
+						>
+							Prev
+						</div>
+						<div
+							class="creator-page-control"
+							id="creator-page-next"
+							onclick="creatorsNext()"
+						>
+							Next
+						</div>
+					</div>
+					<div id="creator-detail-box">
+						<img
+							src="assets/images/cross.png"
+							alt="cross icon"
+							id="cdb-close"
+							class="hover-pointer"
+						/>
+						<img
+							id="creator-img"
+							src="assets/images/creators/anmol sharma.jpg"
+							alt="Anmol Sharma"
+						/>
+						<div id="creator-data">
+							<div id="creator-name"></div>
+							<div id="creator-detail"></div>
+							<div
+								id="creator-social-links"
+								class="hover-pointer-all"
+							>
+								<a
+									class="creator-link cl-instagram"
+									target="_blank"
+								>
+									<img
+										src="assets/images/social-icons/white/instagram.svg"
+										alt="Instagram"
+									/>
+									<span class="social-count"></span>
+								</a>
+								<a
+									class="creator-link cl-youtube"
+									target="_blank"
+								>
+									<img
+										src="assets/images/social-icons/white/youtube.svg"
+										alt="Instagram"
+									/>
+									<span class="social-count"></span>
+								</a>
+								<a
+									class="creator-link cl-twitter"
+									target="_blank"
+								>
+									<img
+										src="assets/images/social-icons/white/twitter.svg"
+										alt="Instagram"
+									/>
+									<span class="social-count"></span>
+								</a>
+								<a
+									class="creator-link cl-linkedin"
+									target="_blank"
+								>
+									<img
+										src="assets/images/social-icons/white/linkedin.svg"
+										alt="Instagram"
+									/>
+									<span class="social-count"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section id="creators-2" class="pointer-events-all">
+				<div id="creators-container-2">
+					<div id="creator-page-controls-2">
+						<div
+							class="creator-page-control-2"
+							id="creator-page-prev-2"
+							onclick="moreCreatorsPrevious()"
+						>
+							Prev
+						</div>
+						<div
+							class="creator-page-control-2"
+							id="creator-page-next-2"
+							onclick="moreCreatorsNext()"
+						>
+							Next
+						</div>
+					</div>
+				</div>
+			</section> -->
+			<section id="contact" class="pointer-events-all">
+				<div class="section-content">
+					<form id="contact-form">
+						<div
+							id="contact-form-container"
+							class="hover-pointer-all"
+						>
+							<div id="contact-form-left">
+								<input
+									type="text"
+									name="entry.944715042"
+									placeholder="What is your full name? *"
+									class="contact-input"
+									required
+								/>
+
+								<input
+									type="text"
+									name="entry.568819618"
+									placeholder="Company or Brand Name *"
+									class="contact-input"
+									required
+								/>
+
+								<input
+									type="email"
+									name="entry.428071128"
+									placeholder="Email Address *"
+									class="contact-input"
+									required
+									oninvalid="this.setCustomValidity('Please enter a valid email')"
+									oninput="this.setCustomValidity('')"
+								/>
+
+								<input
+									type="text"
+									name="entry.1710089201"
+									placeholder="Phone Number *"
+									pattern="\+*[+0-9]{10,15}"
+									class="contact-input"
+									required
+									oninvalid="this.setCustomValidity('Please enter a valid phone number with country code')"
+									oninput="this.setCustomValidity('')"
+								/>
+
+								<input
+									type="url"
+									name="entry.1150814884"
+									placeholder="Website or LinkedIn Profile *"
+									class="contact-input"
+									pattern="https?://[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)"
+									required
+									oninvalid="this.setCustomValidity('Please enter a valid link')"
+									oninput="this.setCustomValidity('')"
+								/>
+							</div>
+							<div id="contact-form-right">
+								<!-- <textarea
+									name="message"
+									id="contact-message"
+									class="contact-input"
+									placeholder="Message"
+									required
+								></textarea> -->
+								<select
+									name="entry.1771582786"
+									class="contact-input contact-dropdown"
+									required
+								>
+									<option value="" disabled selected>
+										What are you looking for? *
+									</option>
+									<option value="Influencer Marketing">
+										Influencer Marketing
+									</option>
+									<option value="Brand Strategy / Consulting">
+										Brand Strategy / Consulting
+									</option>
+									<option value="Creator Collaborations">
+										Creator Collaborations
+									</option>
+									<option value="Content Creation">
+										Content Creation
+									</option>
+									<option value="Other">Other</option>
+								</select>
+
+								<select
+									name="entry.1777817528"
+									class="contact-input contact-dropdown"
+									required
+								>
+									<option value="" disabled selected>
+										Preferred Influencer Type *
+									</option>
+									<option value="Tech / SaaS">
+										Tech / SaaS
+									</option>
+									<option value="Finance">Finance</option>
+									<option value="AI / Productivity">
+										AI / Productivity
+									</option>
+									<option value="Real Estate">
+										Real Estate
+									</option>
+									<option value="Fashion / Beauty">
+										Fashion / Beauty
+									</option>
+									<option value="Health / Wellness">
+										Health / Wellness
+									</option>
+									<option value="Regional / Vernacular">
+										Regional / Vernacular
+									</option>
+									<option value="Other">Other</option>
+								</select>
+								<button
+									type="submit"
+									value="Send"
+									id="contact-form-button"
+								>
+									Submit
+								</button>
+							</div>
+							<a
+								id="career-link"
+								target="_blank"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSf5H-FEcb-11DMECO8rnXK31Ac6TiklqWH0Y5oFdJ5IIrImxg/viewform"
+								>Work with us?</a
+							>
+						</div>
+					</form>
+					<div id="contact-details" class="hover-pointer-all">
+						<div id="email-div"><a href="#"></a></div>
+					</div>
+				</div>
+			</section>
+			<div id="section-indicator" class="pointer-events">Home</div>
+		</main>
+		<div id="snackbar"></div>
+		<section id="popup-overlay">
+			<div id="popup">
+				<img
+					src="assets/images/popup-illustration-2.svg"
+					alt="Social Media Illustration"
+				/>
+				<div id="popup-content">
+					<h2>Become a part of the booming creator economy</h2>
+					<p>
+						At SocialTAG, we are looking to connect with brands and
+						individuals like you to be a part of our journey.
+					</p>
+					<button
+						class="pointer-events hover-pointer"
+						id="popup-button"
+					>
+						Let's Talk
+					</button>
+				</div>
+				<div id="popup-close" class="pointer-events hover-pointer">
+					&#10006;
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<script>
+		function randomInt(min, max) {
+			// min and max included
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		}
+
+		// function openCreatorDetails(event) {
+		// 	let creatorIndex = $(event.target).parent().attr("index");
+		// 	let creator = creatorsData[creatorIndex];
+		// 	$("#creator-name").html(creator.name);
+		// 	$("#creator-detail").html(creator.detail);
+		// 	$("#creator-img").attr(
+		// 		"src",
+		// 		`assets/images/creators/${creator.name.toLowerCase()}.jpg`
+		// 	);
+		// 	$(".creator-link").hide();
+		// 	let socials = ["instagram", "youtube", "twitter", "linkedin"];
+		// 	socials.map((social) => {
+		// 		if (!creator[social]) return;
+		// 		$(".cl-" + social)
+		// 			.show()
+		// 			.attr("href", creator[social]);
+		// 		$(".cl-" + social + ">,social-count").html(
+		// 			creator[social + "-count"]
+		// 		);
+		// 	});
+		// 	anime
+		// 		.timeline({
+		// 			easing: "easeInOutQuad",
+		// 		})
+		// 		.add({
+		// 			targets: ".creator-box",
+		// 			height: 0,
+		// 			delay: anime.stagger(50),
+		// 			duration: 400,
+		// 		})
+		// 		.add({
+		// 			targets: ["#creator-detail-box>*", "#creator-data>*"],
+		// 			opacity: [0, 1],
+		// 			delay: anime.stagger(100),
+		// 			begin: () => {
+		// 				$("#creator-detail-box").show();
+		// 			},
+		// 		});
+		// }
+
+		function openCreatorDetails(event) {
+			if (inTransition) return;
+			inTransition = true;
+			let creatorIndex = $(event.target).parent().attr("index");
+			// console.log(event);
+			let creator = creatorPages[creatorPageIndex][creatorIndex];
+			$("#creator-name").html(creator.name);
+			$("#creator-detail").html(creator.detail);
+			$("#creator-img").attr(
+				"src",
+				`assets/images/creators/${creator.name.toLowerCase()}.jpg`
+			);
+			$(".creator-link").hide();
+			let socials = ["instagram", "youtube", "twitter", "linkedin"];
+			socials.map((social) => {
+				if (!creator[social]) return;
+				$(".cl-" + social)
+					.show()
+					.attr("href", creator[social]);
+				$(".cl-" + social + ">,social-count").html(
+					creator[social + "-count"]
+				);
+			});
+			anime
+				.timeline({
+					easing: "easeInOutQuad",
+					complete: () => {
+						inTransition = false;
+					},
+				})
+				.add({
+					targets: ".creator-box",
+					height: 0,
+					delay: anime.stagger(50),
+					duration: 400,
+				})
+				.add({
+					targets: ["#creator-detail-box>*", "#creator-data>*"],
+					opacity: [0, 1],
+					delay: anime.stagger(100),
+					begin: () => {
+						$("#creator-detail-box").show();
+					},
+				});
+		}
+
+		function showCreatorDetail(creatorName, creatorImage) {
+			if (inTransition) return;
+			inTransition = true;
+
+			// Find the creator data from the global creatorsData array
+			const creator = creatorsData.find((c) => c.name === creatorName);
+			if (!creator) {
+				console.error("Creator not found:", creatorName);
+				inTransition = false;
+				return;
+			}
+
+			$("#creator-name").html(creator.name);
+			$("#creator-detail").html(creator.detail);
+			$("#creator-img").attr("src", `assets/images/${creatorImage}`);
+
+			$(".creator-link").hide();
+			let socials = ["instagram", "youtube", "twitter", "linkedin"];
+			socials.map((social) => {
+				if (!creator[social]) return;
+				$(".cl-" + social)
+					.show()
+					.attr("href", creator[social]);
+				$(".cl-" + social + " .social-count").html(
+					creator[social + "-count"]
+				);
+			});
+
+			anime
+				.timeline({
+					easing: "easeInOutQuad",
+					complete: () => {
+						inTransition = false;
+					},
+				})
+				.add({
+					targets: ".creator-box",
+					height: 0,
+					delay: anime.stagger(50),
+					duration: 400,
+				})
+				.add({
+					targets: ["#creator-detail-box>*", "#creator-data>*"],
+					opacity: [0, 1],
+					delay: anime.stagger(100),
+					begin: () => {
+						$("#creator-detail-box").show();
+					},
+				});
+		}
+
+		function creatorsNext() {
+			if (creatorPageIndex < creatorPages.length) {
+				creatorPageIndex++;
+				setCreators(creatorPageIndex);
+			}
+		}
+
+		function creatorsPrevious() {
+			if (creatorPageIndex > 0) {
+				creatorPageIndex--;
+				setCreators(creatorPageIndex);
+			}
+		}
+		function moreCreatorsNext() {
+			if (moreCreatorPageIndex < moreCreatorPages.length) {
+				moreCreatorPageIndex++;
+				setMoreCreators(moreCreatorPageIndex);
+			}
+		}
+
+		function moreCreatorsPrevious() {
+			if (moreCreatorPageIndex > 0) {
+				moreCreatorPageIndex--;
+				setMoreCreators(moreCreatorPageIndex);
+			}
+		}
+
+		function setCreators(cpIndex) {
+			anime
+				.timeline({
+					easing: "easeInOutQuad",
+				})
+				.add({
+					targets: ".creator-box",
+					height: 0,
+					duration: 500,
+					delay: anime.stagger(100),
+					complete: () => {
+						$(".creator-box").remove();
+						creatorPages[cpIndex].map((creator, index) => {
+							addCreatorsData(creator.name, creator.image, index);
+						});
+						creatorBoxInit();
+						anime({
+							targets: ".creator-box",
+							height: "100%",
+							duration: 500,
+							delay: anime.stagger(100),
+							easing: "easeInOutQuad",
+						});
+					},
+				});
+		}
+		function setMoreCreators(cpIndex) {
+			anime
+				.timeline({
+					easing: "easeInOutQuad",
+				})
+				.add({
+					targets: ".creator-box-2",
+					height: 0,
+					duration: 500,
+					delay: anime.stagger(100),
+					complete: () => {
+						$(".creator-box-2").remove();
+						moreCreatorPages[cpIndex].map((creator, index) => {
+							addMoreCreatorsData(
+								creator.name,
+								creator.image,
+								index
+							);
+						});
+						moreCreatorBoxInit();
+						anime({
+							targets: ".creator-box-2",
+							height: "100%",
+							duration: 500,
+							delay: anime.stagger(100),
+							easing: "easeInOutQuad",
+						});
+					},
+				});
+		}
+
+		function toggleMenu(serial = false) {
+			if (!serial) {
+				if (inTransition) return;
+				inTransition = true;
+			}
+			if (!menuOpened) {
+				anime
+					.timeline({
+						duration: 600,
+						easing: "easeInOutQuad",
+					})
+					.add(
+						{
+							targets: "#menu-circle",
+							rotate: 180,
+						},
+						0
+					)
+					.add(
+						{
+							targets: ".menu-icon-line:nth-child(1)",
+							rotate: -45,
+							translateX: -3,
+							translateY: 7,
+						},
+						0
+					)
+					.add(
+						{
+							targets: ".menu-icon-line:nth-child(2)",
+							rotate: 45,
+							width: "100%",
+							translateX: -3,
+							translateY: -7,
+						},
+						0
+					)
+					.add(
+						{
+							targets: "#body-content",
+							opacity: 0,
+							complete: () => {
+								$("#body-content").hide();
+							},
+						},
+						0
+					)
+					.add(
+						{
+							targets: "#menu",
+							opacity: [0, 1],
+							begin: () => {
+								$("#menu").show();
+							},
+							complete: () => {
+								menuOpened = true;
+								inTransition = false;
+							},
+						},
+						300
+					);
+			} else {
+				anime
+					.timeline({
+						duration: 600,
+						easing: "easeInOutQuad",
+					})
+					.add(
+						{
+							targets: "#menu-circle",
+							rotate: 0,
+						},
+						0
+					)
+					.add(
+						{
+							targets: ".menu-icon-line:nth-child(1)",
+							rotate: 0,
+							duration: 600,
+							translateX: 0,
+							translateY: 0,
+							easing: "easeInOutQuad",
+						},
+						0
+					)
+					.add(
+						{
+							targets: ".menu-icon-line:nth-child(2)",
+							rotate: 0,
+							width: "80%",
+							translateX: 0,
+							translateY: 0,
+							duration: 600,
+							easing: "easeInOutQuad",
+						},
+						0
+					)
+
+					.add(
+						{
+							targets: "#menu",
+							opacity: [1, 0],
+							complete: () => {
+								$("#menu").hide();
+								menuOpened = false;
+							},
+						},
+						0
+					)
+					.add(
+						{
+							targets: "#body-content",
+							opacity: 1,
+							duration: 600,
+							easing: "easeInOutQuad",
+							begin: () => {
+								$("#body-content").show();
+							},
+							complete: () => {
+								if (!serial) inTransition = false;
+							},
+						},
+						300
+					);
+			}
+		}
+
+		//avoiding caching of logo animation GIF to avoid playback issues on firefox and probably some other browsers
+		$("#logo-anim>img").attr(
+			"src",
+			"assets/gifs/logo.gif?id=" + randomInt(0, 999999)
+		);
+
+		let initialHeight = window.innerHeight;
+
+		let menuOpened = false;
+		let currentSection = 0;
+		let inTransition = true;
+		let arrowStatus = {
+			up: false,
+			down: true,
+		};
+		// let brandsIndex = Array(9)
+		// 	.fill()
+		// 	.map((item, index) => index);
+		// let brandsAnimInterval;
+		let brandBoxIndex = [0, 1, 2, 3, 4, 5];
+		let brandBoxAnimStatus = false;
+		let brandBoxAnimLoop = false;
+		let brandBoardIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+		let brandBoardAnimStatus = false;
+		let brandBoardAnimLoop = false;
+		let caseStudiesOpen = false;
+		let caseStudyCategory = "instagram";
+		let currentCaseStudyData;
+		let currentCaseStudyIndex = 0;
+
+		$("#popup-overlay").hide();
+
+		//Initializing How we do it slider
+		var ab3Slider = new Swiper(".ab3-slider", {
+			loop: true,
+			effect: "cards",
+			grabCursor: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			cardsEffect: {
+				slideShadows: false,
+			},
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: "#ab3-controls",
+				clickable: true,
+				bulletActiveClass: "active",
+				bulletClass: "ab3-icon",
+				renderBullet: function (index, className) {
+					let icon = "Target";
+					if (index == 1) icon = "Search";
+					if (index == 2) icon = "Amplify";
+					if (index == 3) icon = "Track";
+					return `<img
+          src="assets/images/about-icons/${icon.toLowerCase()}.svg"
+          alt="${icon}"
+          class="ab3-icon"
+        />`;
+				},
+			},
+		});
+
+		$(() => {
+			$(
+				`#menu,
+					#home2,
+					#home3,
+					#about,
+
+					#about3,
+					#about4,
+					
+					#brands,
+					#creator-detail-box,
+					#creators,
+					#creators-2,
+					
+					#contact`
+			).hide();
+			// $('#about4').show(); // Temporarily show about4 for debugging
+
+			function loadSVGs() {
+				for (let i = 1; i <= 6; i++)
+					document.head.innerHTML += `<link rel="prefetch" href="assets/images/services/icon-${i}.svg" as="image"/>`;
+			}
+			loadSVGs();
+
+			resizeSettings();
+
+			$("#bg-grid>div").css("opacity", "0");
+			$(window).on("resize", resizeSettings);
+
+			function resizeSettings() {
+				setBackgroundGrid();
+				setBillboardBar();
+				if (window.innerHeight < 500) {
+					$("#header, #contact-details, #section-indicator").hide();
+				} else {
+					$("#header, #contact-details, #section-indicator").show();
+				}
+
+				if (window.innerWidth < 600) {
+					$("#section-nav").hide();
+				} else {
+					$("#section-nav").css({ display: "flex", opacity: "1" });
+				}
+
+				if (window.innerWidth > 650) {
+					// $(".service-box").tilt({
+					// 	glare: true,
+					// 	maxGlare: 1,
+					// 	scale: 1.05,
+					// });
+					// $("#social-media-card").tilt({
+					// 	glare: true,
+					// 	maxGlare: 1,
+					// 	scale: 1.05,
+					// });
+					VanillaTilt.init(
+						document.querySelectorAll(".service-box"),
+						{
+							max: 20,
+							speed: 400,
+							glare: true,
+							"max-glare": 0.5,
+						}
+					);
+					VanillaTilt.init(document.querySelectorAll(".d-hover"), {
+						max: 20,
+						speed: 400,
+						glare: true,
+						"max-glare": 0.5,
+					});
+					VanillaTilt.init(
+						document.querySelector("#social-media-card"),
+						{
+							max: 20,
+							speed: 200,
+							glare: true,
+							"max-glare": 0.5,
+						}
+					);
+					VanillaTilt.init(
+						document.querySelectorAll(".cs-type-box"),
+						{
+							max: 20,
+							speed: 400,
+							glare: true,
+							"max-glare": 0.5,
+						}
+					);
+				}
+				// document.documentElement.style.setProperty(`overflow`, `auto`);
+				// const metaViewport =
+				// 	document.querySelector(`meta[name=viewport]`);
+				// metaViewport.setAttribute(
+				// 	`content`,
+				// 	`height=` +
+				// 		initialHeight +
+				// 		`, width=device-width, initial-scale=1.0`
+				// );
+			}
+
+			//function to add background grid boxes as per screen size
+			function setBackgroundGrid() {
+				let boxWidth = $(window).outerHeight() / 7;
+				let windowWidth = $(window).outerWidth();
+				let boxTemplate = `<div></div>`;
+				$("#bg-grid").html(
+					boxTemplate.repeat(Math.ceil(windowWidth / boxWidth) * 7)
+				);
+
+				if (window.innerWidth > 600) {
+					//binding hover animation with background grid boxes
+					$("#bg-grid>div").hover(function () {
+						$(this).addClass("bg-grid-animation");
+					});
+					$("#bg-grid>div").bind(
+						"webkitAnimationEnd mozAnimationEnd animationend",
+						function () {
+							$(this).removeClass("bg-grid-animation");
+						}
+					);
+				}
+
+				$("#bg-grid>div").click(function () {
+					if (inBgTransition) return;
+					inBgTransition = true;
+					// let animColor = `rgba(${randomInt(250, 255)},${randomInt(
+					// 	35,
+					// 	45
+					// )},${randomInt(100, 110)},${randomInt(20, 30) / 100})`;
+
+					let animColor = `rgba(${randomInt(10, 255)},${randomInt(
+						10,
+						255
+					)},${randomInt(10, 255)},${randomInt(20, 30) / 100})`;
+
+					// let animColor = `hsl(${randomInt(1, 359)},${randomInt(
+					// 	95,
+					// 	100
+					// )},${randomInt(48, 52)})`;
+
+					// console.log(
+					// 	"%c" + animColor,
+					// 	"padding:10px; background-color:" + animColor
+					// );
+					anime({
+						targets: "#bg-grid>div",
+						scale: [
+							{ value: 0.9, duration: 500 },
+							{ value: 1, duration: 500 },
+						],
+						backgroundColor: [
+							{
+								value: animColor,
+								duration: 500,
+							},
+							{ value: "rgba(0,0,0,0)", duration: 500 },
+						],
+						delay: anime.stagger(100, {
+							grid: [7, 12],
+							from: $(this).index(),
+						}),
+						easing: "easeInOutQuad",
+						complete: () => {
+							inBgTransition = false;
+						},
+					});
+				});
+			}
+
+			function setBillboardBar() {
+				if (window.innerWidth <= 600) return;
+				let billboardHeight =
+					Math.min(630, (window.innerWidth / 100) * 70) * (38 / 63);
+				let billboardBarHeight =
+					window.innerHeight / 2 - billboardHeight / 2;
+				$("#billboard-bar").css("height", billboardBarHeight + "px");
+			}
+
+			function beginBrandBoxesAnim() {
+				if (!brandBoxAnimStatus || brandBoxAnimLoop) return;
+				brandBoxAnimLoop = true;
+				let brandBoxAnim = anime
+					.timeline({
+						easing: "easeInOutQuad",
+					})
+					.add({
+						targets: ".brand-box > img",
+						opacity: 0,
+						duration: 1000,
+						delay: anime.stagger(150),
+						complete: function (anim) {
+							let newBrandIndex = brandBoxIndex[5] + 1;
+							for (i in brandBoxIndex) {
+								if (newBrandIndex > brandsData.length - 1)
+									newBrandIndex = 0;
+								brandBoxIndex[i] = newBrandIndex;
+								newBrandIndex++;
+							}
+
+							let targets = anim.animatables;
+							for (i in targets) {
+								$(targets[i].target).attr(
+									"src",
+									`assets/images/brands-new/colored/${brandsData[
+										brandBoxIndex[i]
+									].name.toLowerCase()}.png`
+								);
+							}
+						},
+					})
+					.add({
+						targets: ".brand-box > img",
+						opacity: 1,
+						duration: 1000,
+						delay: anime.stagger(150),
+						endDelay: 5000,
+						complete: function (anim) {
+							brandBoxAnimLoop = false;
+							beginBrandBoxesAnim();
+						},
+					});
+			}
+
+			function beginBrandBoardAnim() {
+				if (!brandBoardAnimStatus || brandBoardAnimLoop) return;
+				brandBoardAnimLoop = true;
+				let brandBoardAnim = anime
+					.timeline({
+						easing: "easeInOutQuad",
+					})
+					.add({
+						targets: ".brand-logo",
+						opacity: 0,
+						duration: 1000,
+						delay: anime.stagger(150),
+						endDelay: 150,
+						complete: function (anim) {
+							let newBrandIndex = brandBoardIndex[8] + 1;
+							for (i in brandBoardIndex) {
+								if (newBrandIndex > brandsData.length - 1)
+									newBrandIndex = 0;
+								brandBoardIndex[i] = newBrandIndex;
+								newBrandIndex++;
+							}
+
+							let targets = anim.animatables;
+							for (i in targets) {
+								$(targets[i].target).attr(
+									"src",
+									`assets/images/brands-new/colored/${brandsData[
+										brandBoardIndex[i]
+									].name.toLowerCase()}.png`
+								);
+							}
+						},
+					})
+					.add({
+						targets: ".brand-logo",
+						opacity: 1,
+						duration: 1000,
+						delay: anime.stagger(150),
+						endDelay: 5000,
+						complete: function (anim) {
+							brandBoardAnimLoop = false;
+							beginBrandBoardAnim();
+						},
+					});
+			}
+
+			// let logoGIF = new Image();
+			// logoGIF.src = "assets/gifs/logo.gif";
+			// logoGIF.onload = function () {
+			// 	console.log("Loading over");
+			// 	$("#logo-anim").append(logoGIF);
+			// 	beginIntroAnim();
+			// };
+
+			let logoGIF = new SuperGif({
+				gif: document.querySelector("#logo-gif"),
+				progressbar_height: 10,
+				progressbar_background_color: "#1c1c1c",
+				progressbar_foreground_color: "#ff2868",
+				max_width: Math.min((window.innerWidth / 100) * 75, 384),
+				on_end: function (elem) {
+					$("#logo-anim").hide();
+				},
+			});
+
+			$("#logo-anim").css("opacity", "1");
+
+			logoGIF.load(function () {
+				logoGIF.play();
+				beginIntroAnim();
+			});
+
+			function popupClose() {
+				$("#popup-overlay").fadeOut(1000);
+				inTransition = false;
+			}
+
+			$("#popup-close").click(popupClose);
+
+			// Intro animation timeline
+			function beginIntroAnim() {
+				var introAnim = anime
+					.timeline({
+						easing: "linear",
+						duration: 500,
+						complete: () => {
+							inTransition = false;
+							// setTimeout(() => {
+							// 	inTransition = true;
+							// 	$("#popup-overlay").fadeIn(1000);
+							// }, 5000);
+						},
+					})
+					.add({
+						targets: "#bg-grid>div",
+						opacity: 1,
+						delay: anime.stagger(15, { from: "center" }),
+					})
+					.add(
+						{
+							targets: "#logo-anim",
+							opacity: 0,
+						},
+						2000
+					)
+					.add(
+						{
+							targets: "#body-content",
+							scale: [1.15, 1],
+							translateY: [50, 0],
+							opacity: 1,
+							begin: () => {
+								$("#body-content").css("display", "grid");
+							},
+						},
+						2000
+					)
+					.add(
+						{
+							targets: ["#header", "#cta-button"],
+							opacity: 1,
+							begin: () => {
+								$("#header, #cta-button").show();
+							},
+						},
+						2000
+					);
+				if (window.innerWidth > 600)
+					introAnim.add(
+						{
+							targets: "#section-nav",
+							opacity: 1,
+							begin: () => {
+								$("#section-nav").css("display", "flex");
+							},
+						},
+						2500
+					);
+			}
+
+			// Menu icon animation
+			$("#menu-circle").click(() => {
+				toggleMenu(false);
+			});
+
+			let inBgTransition = false;
+
+			var activeID = 0;
+
+			var sectionIDs = {
+				0: "Home",
+				2: "About",
+				3: "About4",
+
+				5: "Brands",
+				6: "Creators",
+				7: "Contact",
+				home: 0,
+				about: 2,
+				about4: 3,
+
+				brands: 5,
+				creators: 6,
+				contact: 7,
+			};
+
+			var sectionAnims = [
+				{
+					id: sectionIDs.home,
+					name: "Home",
+					in: [
+						{
+							targets: "#home1>*",
+							translateY: [-100, 0],
+							opacity: [0, 1],
+							begin: () => {
+								$("#home1").show();
+							},
+						},
+					],
+					out: [
+						{
+							targets: "#home1>*",
+							translateY: -100,
+							opacity: [1, 0],
+							complete: () => {
+								$("#home1").hide();
+							},
+						},
+					],
+				},
+				// mission
+				// {
+				// 	id: sectionIDs.mission,
+				// 	name: "Mission",
+				// 	in: [
+				// 		{
+				// 			targets: "#mission>*",
+				// 			translateY: [-50, 0],
+				// 			opacity: [0, 1],
+				// 			begin: () => {
+				// 				$("#mission").show();
+				// 			},
+				// 		},
+				// 	],
+				// 	out: [
+				// 		{
+				// 			targets: "#mission>*",
+				// 			translateY: 50,
+				// 			opacity: [1, 0],
+				// 			complete: () => {
+				// 				$("#mission").hide();
+				// 			},
+				// 		},
+				// 	],
+				// },
+				{
+					id: sectionIDs.home,
+					name: "",
+					in: [
+						{
+							targets: "#home2>h1",
+							translateY: [100, 0],
+							opacity: [0, 1],
+							begin: () => {
+								$("#home2").show();
+							},
+						},
+						{
+							targets: "#home2>h2",
+							translateY: [100, 0],
+							opacity: [0, 1],
+						},
+						{
+							pc: {
+								targets: "#ig-icon",
+								top: ["50%", "5%"],
+								right: ["50%", "7%"],
+								opacity: [0, 1],
+								rotate: [-50, 0],
+							},
+							mobile: {
+								targets: "#ig-icon",
+								top: ["50%", "5%"],
+								right: ["50%", "12%"],
+								opacity: [0, 1],
+								rotate: [-50, 0],
+							},
+						},
+						{
+							pc: {
+								targets: "#yt-icon",
+								top: ["30%", "12%"],
+								left: ["30%", "8%"],
+								opacity: [0, 1],
+								rotate: [50, 0],
+							},
+							mobile: {
+								targets: "#yt-icon",
+								top: ["30%", "5%"],
+								left: ["30%", "8%"],
+								opacity: [0, 1],
+								rotate: [50, 0],
+							},
+						},
+						{
+							pc: {
+								targets: "#tw-icon",
+								bottom: ["30%", "8%"],
+								left: ["30%", "16%"],
+								opacity: [0, 1],
+								rotate: [50, 0],
+							},
+							mobile: {
+								targets: "#tw-icon",
+								bottom: ["30%", "8%"],
+								left: ["30%", "5%"],
+								opacity: [0, 1],
+								rotate: [50, 0],
+							},
+						},
+						{
+							pc: {
+								targets: "#li-icon",
+								bottom: ["30%", "7%"],
+								right: ["30%", "16%"],
+								opacity: [0, 1],
+								rotate: [-50, 0],
+							},
+							mobile: {
+								targets: "#li-icon",
+								bottom: ["30%", "7%"],
+								right: ["30%", "5%"],
+								opacity: [0, 1],
+								rotate: [-50, 0],
+							},
+						},
+					],
+					out: [
+						{
+							targets: "#home2>h1",
+							translateY: [0, 100],
+							opacity: [1, 0],
+						},
+						{
+							targets: "#home2>h2",
+							translateY: [0, 100],
+							opacity: [1, 0],
+							complete: () => {
+								$("#home2").hide();
+							},
+						},
+						{
+							targets: "#ig-icon",
+							right: "-20%",
+							opacity: [1, 0],
+							rotate: 50,
+						},
+						{
+							targets: "#yt-icon",
+							left: "-20%",
+							opacity: [1, 0],
+							rotate: -50,
+						},
+						{
+							targets: "#tw-icon",
+							left: "-20%",
+							opacity: [1, 0],
+							rotate: -50,
+						},
+						{
+							targets: "#li-icon",
+							right: "-20%",
+							opacity: [1, 0],
+							rotate: 50,
+						},
+					],
+				},
+
+				// {
+				// 	id: sectionIDs.home,
+				// 	name: "Services",
+				// 	in: [
+				// 		{
+				// 			targets: "#home3",
+				// 			opacity: [0, 1],
+				// 			begin: () => {
+				// 				$("#home3").show();
+				// 			},
+				// 			complete: () => {
+				// 				window.dispatchEvent(new Event("resize"));
+				// 			},
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(1)",
+				// 			translateX: [-100, 0],
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(2)",
+				// 			translateY: [-100, 0],
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(3)",
+				// 			translateY: [100, 0],
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(4)",
+				// 			translateX: [100, 0],
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(5)",
+				// 			translateY: [100, 0],
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(6)",
+				// 			translateX: [100, 0],
+				// 		},
+				// 	],
+				// 	out: [
+				// 		{
+				// 			targets: "#home3",
+				// 			opacity: [1, 0],
+				// 			begin: () => {
+				// 				if (serviceDetail) {
+				// 					$(".service-box[status=selected]").trigger(
+				// 						"click"
+				// 					);
+				// 				}
+				// 			},
+				// 			complete: () => {
+				// 				$("#home3").hide();
+				// 			},
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(1)",
+				// 			translateX: -100,
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(2)",
+				// 			translateY: -100,
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(3)",
+				// 			translateY: 100,
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(4)",
+				// 			translateX: 100,
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(5)",
+				// 			translateY: 100,
+				// 		},
+				// 		{
+				// 			targets: ".service-box:nth-of-type(6)",
+				// 			translateX: 100,
+				// 		},
+				// 	],
+				// },
+
+				{
+					id: sectionIDs.about,
+					name: "About",
+					in: [
+						{
+							targets: "#about",
+							opacity: [0, 1],
+							begin: () => {
+								$("#about").show();
+							},
+							complete: () => {
+								window.dispatchEvent(new Event("resize"));
+							},
+						},
+						{
+							targets: "#about-left-content",
+							translateX: [-100, 0],
+						},
+						{
+							pc: {
+								targets: "#social-media-card",
+								translateY: [-100, 0],
+								complete: () => {
+									startSMCCounter(200 * 1000);
+									startSMCAnimation();
+								},
+							},
+							mobile: {
+								targets: "#social-media-card",
+								translateX: [100, 0],
+								complete: () => {
+									startSMCCounter(200 * 1000);
+									startSMCAnimation();
+								},
+							},
+						},
+					],
+					out: [
+						{
+							targets: "#about",
+							opacity: [1, 0],
+							complete: () => {
+								$("#about").hide();
+								stopSMCAnimation();
+							},
+						},
+						{
+							pc: {
+								targets: "#about-left-content",
+								translateX: -100,
+							},
+							mobile: {
+								targets: "#about-left-content",
+								translateX: 100,
+							},
+						},
+						{
+							pc: {
+								targets: "#social-media-card",
+								translateY: -100,
+							},
+							mobile: {
+								targets: "#social-media-card",
+								translateX: -100,
+							},
+						},
+					],
+				},
+
+				{
+					id: sectionIDs.about,
+					name: "What we do",
+					in: [
+						{
+							targets: "#about4",
+							opacity: [0, 1],
+							begin: () => {
+								$("#about4").show();
+							},
+							// complete: () => {
+							// 	window.dispatchEvent(new Event("resize"));
+							// },
+						},
+						{
+							targets: "#ab4-left-icon",
+							translateX: [-100, 0],
+						},
+						{
+							targets: "#ab4-right-icon",
+							translateX: [100, 0],
+						},
+						{
+							targets: "#ab4-title",
+							translateY: [100, 0],
+						},
+						{
+							targets: ".ab4-li",
+							translateY: [100, 0],
+							opacity: [0, 1],
+							delay: anime.stagger(150),
+						},
+					],
+					out: [
+						{
+							targets: "#about4",
+							opacity: [1, 0],
+							complete: () => {
+								$("#about4").hide();
+							},
+						},
+						{
+							targets: "#ab4-left-icon",
+							translateX: -100,
+						},
+						{
+							targets: "#ab4-right-icon",
+							translateX: 100,
+						},
+						{
+							targets: "#ab4-title",
+							translateY: -100,
+						},
+						{
+							targets: ".ab4-li",
+							translateY: -100,
+							delay: anime.stagger(150),
+						},
+					],
+				},
+				{
+					id: sectionIDs.about,
+					name: "Why Us",
+					in: [
+						{
+							targets: "#about3",
+							opacity: [0, 1],
+							begin: () => {
+								$("#about3").show();
+								ab3Slider.slideTo(0);
+							},
+						},
+						{
+							mobile: {
+								targets: "#ab3-controls",
+								translateY: [50, -20],
+							},
+						},
+						{
+							mobile: {
+								targets: "#ab3-title",
+								translateY: [100, 20],
+							},
+							pc: {
+								targets: "#ab3-title",
+								translateY: [100, 0],
+							},
+						},
+						{
+							mobile: {
+								targets: ".ab3-slider",
+								scale: [0.5, 1],
+							},
+							pc: {
+								targets: "#pc-ab3-cards .ab3-card",
+								translateY: [100, 0],
+								delay: anime.stagger(100),
+							},
+						},
+					],
+					out: [
+						{
+							targets: "#about3",
+							opacity: [1, 0],
+							complete: () => {
+								$("#about3").hide();
+							},
+						},
+						{
+							mobile: {
+								targets: "#ab3-controls",
+								translateY: 50,
+							},
+						},
+						{
+							targets: "#ab3-title",
+							translateY: -50,
+						},
+						{
+							mobile: {
+								targets: ".ab3-slider",
+								scale: 0.5,
+							},
+							pc: {
+								targets: "#pc-ab3-cards .ab3-card",
+								translateY: -100,
+								delay: anime.stagger(100),
+							},
+						},
+					],
+				},
+				//  {
+				//  	id: sectionIDs.process,
+				//  	name: "The Roadmap",
+				//  	in: [
+				//  		{
+				//  			targets: "#about2",
+				//  			opacity: [0, 1],
+				//  			begin: () => {
+				//  				$("#about2").show();
+				//  			},
+				//  			// complete: () => {
+				//  			// 	window.dispatchEvent(new Event("resize"));
+				//  			// },
+				//  		},
+				//  	],
+				//  	out: [
+				//  		{
+				//  			targets: "#about2",
+				//  			opacity: [1, 0],
+				//  			complete: () => {
+				//  				$("#about2").hide();
+				//  			},
+				//  		},
+				//  	],
+				//  },
+
+				{
+					id: sectionIDs.brands,
+					name: "Brands",
+					in: [
+						{
+							pc: {
+								targets: "#brands",
+								opacity: [0, 1],
+								begin: () => {
+									$("#brands").show();
+								},
+								complete: () => {
+									brandBoardAnimStatus = true;
+									//beginBrandBoardAnim();
+								},
+							},
+							mobile: {
+								targets: "#brands",
+								opacity: [0, 1],
+								begin: () => {
+									$("#brands").show();
+								},
+								complete: () => {
+									brandBoxAnimStatus = true;
+									//beginBrandBoxesAnim();
+								},
+							},
+						},
+						// {
+						// 	pc: {
+						// 		targets: Array(9)
+						// 			.fill()
+						// 			.map(
+						// 				(elem, index) =>
+						// 					`.brand-logo:nth-of-type(${
+						// 						index + 1
+						// 					})`
+						// 			),
+						// 		opacity: [0, 1],
+						// 		begin: (anim) => {
+						// 			// inTransition = false;
+						// 			let targets = anim.animatables.map(
+						// 				(animatable) => animatable.target
+						// 			);
+						// 			$(targets).css("display", "block");
+						// 		},
+						// 		complete: () => {
+						// 			beginBrandsAnim();
+						// 		},
+						// 		delay: anime.stagger(50),
+						// 	},
+						// },
+					],
+					out: [
+						{
+							pc: {
+								targets: "#brands",
+								opacity: [1, 0],
+								complete: () => {
+									brandBoardAnimStatus = false;
+									$("#brands").hide();
+									// clearInterval(brandsAnimInterval);
+									// brandsIndex = Array(9)
+									// 	.fill()
+									// 	.map((item, index) => index);
+								},
+							},
+							mobile: {
+								targets: "#brands",
+								opacity: [1, 0],
+								complete: () => {
+									brandBoxAnimStatus = false;
+									$("#brands").hide();
+								},
+							},
+						},
+					],
+				},
+				// {
+				// 	id: sectionIDs.about5,
+				// 	name: "Why SocialTag",
+				// 	in: [
+				// 		{
+				// 			targets: "#about5",
+				// 			opacity: [0, 1],
+				// 			begin: () => {
+				// 				$("#about5").show();
+				// 			},
+				// 			complete: () => {
+				// 				window.dispatchEvent(new Event("resize"));
+				// 			},
+				// 		},
+				// 		{
+				// 			targets: ".ab5-li",
+				// 			translateY: [100, 0],
+				// 			opacity: [0, 1],
+				// 			delay: anime.stagger(150),
+				// 		},
+				// 	],
+				// 	out: [
+				// 		{
+				// 			targets: "#about5",
+				// 			opacity: [1, 0],
+				// 			complete: () => {
+				// 				$("#about5").hide();
+				// 			},
+				// 		},
+				// 		{
+				// 			targets: ".ab5-li",
+				// 			translateY: 100,
+				// 			opacity: [1, 0],
+				// 			delay: anime.stagger(150),
+				// 		},
+				// 	],
+				// },
+				{
+					id: sectionIDs.creators,
+					// name: `<div class="marquee"><p class="primary bold">Exclusive Creators</p> we closely work with</div>`,
+					name: `Creators`,
+					in: [
+						{
+							targets: "#creators",
+							opacity: [0, 1],
+							begin: () => {
+								$("#creators").show();
+							},
+						},
+						{
+							pc: {
+								targets: Array(5)
+									.fill()
+									.map(
+										(elem, index) =>
+											`.creator-box:nth-of-type(${
+												index + 3
+											})`
+									),
+								opacity: [0, 1],
+								translateY: [-100, 0],
+								delay: anime.stagger(100),
+								duration: 500,
+								easing: "linear",
+							},
+							mobile: {
+								targets:
+									".creator-box:nth-of-type(2),.creator-box:nth-of-type(4),.creator-box:nth-of-type(6),.creator-box:nth-of-type(8),.creator-box:nth-of-type(10)",
+								opacity: [0, 1],
+								translateX: [-100, 0],
+								delay: anime.stagger(100),
+								duration: 500,
+							},
+						},
+						{
+							pc: {
+								targets: Array(5)
+									.fill()
+									.map(
+										(elem, index) =>
+											`.creator-box:nth-of-type(${
+												index + 8
+											})`
+									),
+								opacity: [0, 1],
+								translateY: [100, 0],
+								delay: anime.stagger(100),
+								duration: 500,
+								easing: "linear",
+							},
+							mobile: {
+								targets:
+									".creator-box:nth-of-type(3),.creator-box:nth-of-type(5),.creator-box:nth-of-type(7),.creator-box:nth-of-type(9),.creator-box:nth-of-type(11)",
+								opacity: [0, 1],
+								translateX: [100, 0],
+								delay: anime.stagger(100),
+								duration: 500,
+							},
+						},
+					],
+					out: [
+						{
+							targets: "#creators",
+							opacity: [1, 0],
+							begin: () => {},
+							complete: () => {
+								creatorBoxClose(true);
+								$("#creators").hide();
+							},
+							duration: 550,
+						},
+						{
+							pc: {
+								targets: Array(5)
+									.fill()
+									.map(
+										(elem, index) =>
+											`.creator-box:nth-of-type(${
+												index + 2
+											})`
+									),
+								translateY: -100,
+								opacity: [1, 0],
+								delay: anime.stagger(100),
+								duration: 500,
+							},
+							mobile: {
+								targets:
+									".creator-box:nth-of-type(2),.creator-box:nth-of-type(4),.creator-box:nth-of-type(6),.creator-box:nth-of-type(8),.creator-box:nth-of-type(10)",
+								opacity: [1, 0],
+								translateX: [0, -100],
+								delay: anime.stagger(100),
+								duration: 500,
+							},
+						},
+						{
+							pc: {
+								targets: Array(5)
+									.fill()
+									.map(
+										(elem, index) =>
+											`.creator-box:nth-of-type(${
+												index + 7
+											})`
+									),
+								translateY: 100,
+								opacity: [1, 0],
+								delay: anime.stagger(100, {
+									direction: "reverse",
+								}),
+								duration: 500,
+							},
+							mobile: {
+								targets:
+									".creator-box:nth-of-type(3),.creator-box:nth-of-type(5),.creator-box:nth-of-type(7),.creator-box:nth-of-type(9),.creator-box:nth-of-type(11)",
+								opacity: [1, 0],
+								translateX: [0, 100],
+								delay: anime.stagger(100),
+								duration: 500,
+							},
+						},
+					],
+				},
+				{
+					id: sectionIDs.contact,
+					name: "Contact",
+					in: [
+						{
+							targets: "#contact",
+							opacity: [0, 1],
+							begin: () => {
+								$("#contact").show();
+							},
+							duration: 500,
+						},
+						{
+							targets: "#cta-button",
+							opacity: 0,
+							translateY: -100,
+							complete: () => {
+								$("#cta-button").hide();
+							},
+						},
+						{
+							targets: "#contact-form-left>*",
+							opacity: [0, 1],
+							translateX: [-100, 0],
+							delay: anime.stagger(100),
+						},
+						{
+							pc: {
+								targets: "#contact-form-right>*:first-child",
+								translateY: [-100, 0],
+								opacity: [0, 1],
+							},
+							mobile: {
+								targets: "#contact-form-right>*:first-child",
+								translateX: [-100, 0],
+								opacity: [0, 1],
+								delay: 500,
+							},
+						},
+						{
+							targets: "#contact-form-right>*:last-child",
+							translateY: [100, 0],
+						},
+						{
+							targets: "#email-div",
+							translateY: [100, 0],
+						},
+					],
+					out: [
+						{
+							targets: "#contact",
+							opacity: [1, 0],
+							complete: () => {
+								$("#contact").hide();
+							},
+						},
+						{
+							targets: "#cta-button",
+							opacity: 1,
+							translateY: [-100, 0],
+							begin: () => {
+								$("#cta-button").show();
+							},
+						},
+						{
+							targets: "#contact-form-left>*",
+							opacity: [1, 0],
+							translateX: -100,
+							delay: anime.stagger(100),
+						},
+						{
+							pc: {
+								targets: "#contact-form-right>*:first-child",
+								translateY: -100,
+								opacity: [1, 0],
+							},
+							mobile: {
+								targets: "#contact-form-right>*:first-child",
+								translateX: -100,
+								opacity: [1, 0],
+								delay: 500,
+							},
+						},
+						{
+							targets: "#contact-form-right>*:last-child",
+							translateY: 100,
+						},
+						{
+							targets: "#email-div",
+							translateY: 100,
+						},
+					],
+				},
+			];
+
+			$("#logo").click(() => {
+				if (currentSection !== 0) setSection(0);
+			});
+
+			function nextSection() {
+				// 	if (inTransition) return;
+				// 	if (caseStudiesOpen) {
+				// 		if (currentCaseStudyIndex + 1 < currentCaseStudyData.length)
+				// 			setCaseStudyData(currentCaseStudyIndex + 1);
+				// 	} else
+				if (currentSection + 1 < sectionAnims.length)
+					setSection(currentSection + 1);
+			}
+
+			function previousSection() {
+				// if (inTransition) return;
+				// if (caseStudiesOpen) {
+				// 	if (currentCaseStudyIndex - 1 >= 0)
+				// 		setCaseStudyData(currentCaseStudyIndex - 1);
+				// } else if (currentSection - 1 >= 0)
+				setSection(currentSection - 1);
+			}
+
+			$("#up-arrow").click(() => {
+				previousSection();
+			});
+			$("#down-arrow").click(() => {
+				nextSection();
+			});
+
+			$("#cs-exit").click((e) => {
+				inTransition = true;
+				$(".cs-type-box").css(
+					"transform",
+					"perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)"
+				);
+				anime
+					.timeline({
+						duration: 800,
+						easing: "easeInOutQuad",
+						complete: () => {
+							inTransition = false;
+							caseStudiesOpen = false;
+						},
+					})
+					.add(
+						{
+							targets: "#cs-exit",
+							translateX: [0, 50],
+							opacity: 0,
+						},
+						0
+					)
+					.add(
+						{
+							targets: [
+								"#cs-content-1",
+								"#cs-content-2",
+								".cs-loader",
+							],
+							opacity: 0,
+							complete: () => {
+								$(
+									"#cs-content-1, #cs-content-2, .cs-loader"
+								).css("display", "none");
+							},
+						},
+						0
+					)
+					.add(
+						{
+							targets: [
+								"#cs-menu",
+								"#logo",
+								"#menu-icon",
+								"#menu-circle",
+								"#cta-button",
+							],
+							opacity: 1,
+							begin: (anim) => {
+								$(
+									"#cs-menu, #logo, #menu-icon, #menu-circle, #cta-button"
+								).show();
+								$("#header").css("display", "flex");
+							},
+						},
+						400
+					)
+					.add(
+						{
+							targets: "#menu-icon, #menu-circle, #logo",
+							translateY: 0,
+						},
+						400
+					)
+					.add(
+						{
+							targets: "#cta-button",
+							translateY: 0,
+						},
+						400
+					);
+			});
+
+			function setCaseStudyData(CSIndex = null) {
+				if (inTransition) return;
+				if (CSIndex == null) CSIndex = currentCaseStudyIndex;
+				let tempCS = currentCaseStudyData[CSIndex];
+				inTransition = true;
+				anime({
+					targets: "#cs-content-1, #cs-content-2",
+					opacity: 0,
+					easing: "linear",
+					duration: 400,
+					complete: () => {
+						$("#cs-content-1, #cs-content-2").css(
+							"display",
+							"none"
+						);
+						anime({
+							targets: ".cs-loader",
+							opacity: [0, 1],
+							// translateY: [100, 0],
+							duration: 400,
+							begin: () => {
+								$(".cs-loader").show();
+							},
+							easing: "easeInOutQuad",
+						});
+						if (tempCS.type == "1" || window.innerWidth < 600) {
+							$("#cs-content-1-collab-logo").attr(
+								"src",
+								"assets/images/cs-logos/" +
+									tempCS.brand +
+									".svg"
+							);
+							$("#cs-content-1-collab-logo").attr(
+								"alt",
+								tempCS.brand
+							);
+							$("#cs-content-1-media").html(
+								`<img style="object-fit:${
+									["cover", "contain"].includes(tempCS.fit)
+										? tempCS.fit
+										: "contain"
+								}" src="assets/case-studies-media/${
+									tempCS.media
+								}" alt="">`
+							);
+							$("#cs-1-influencers").text(tempCS.influencers);
+							$("#cs-1-reach").text(tempCS.reach);
+
+							if (tempCS.platform.includes(",")) {
+								let CSMediaIcons = tempCS.platform
+									.split(",")
+									.map((item) => item.trim().toLowerCase());
+								$("#cs-1-platform").html("");
+								$("#cs-1-platform-icon").hide();
+								let CSMediaIconsMap = {
+									insta: "instagram",
+								};
+								for (i in CSMediaIcons) {
+									$("#cs-1-platform").append(
+										`<img style="height: 26px; object-fit: contain; object-position: center;" src="assets/images/cs-icons/${
+											CSMediaIconsMap[CSMediaIcons[i]] ||
+											CSMediaIcons[i]
+										}.svg">`
+									);
+
+									if (parseInt(i) + 1 < CSMediaIcons.length) {
+										$("#cs-1-platform").append(" + ");
+									}
+								}
+							} else {
+								$("#cs-1-platform-icon").show();
+								$("#cs-1-platform").text(tempCS.platform);
+							}
+							$("#cs-1-cpv").text(tempCS.cpv);
+							$("#cs-content-1").css("display", "grid");
+
+							var brandLogo = document.querySelector(
+								"#cs-content-1-collab-logo"
+							);
+
+							function loaded() {
+								anime({
+									targets: ".cs-loader",
+									opacity: 0,
+									// translateY: -100,
+									duration: 400,
+									easing: "easeInOutQuad",
+									complete: () => {
+										$(".cs-loader").hide();
+									},
+								});
+								anime({
+									targets: "#cs-content-1",
+									opacity: [0, 1],
+									easing: "linear",
+									duartion: 400,
+									complete: () => {
+										inTransition = false;
+										brandLogo.removeEventListener(
+											"load",
+											loaded
+										);
+									},
+								});
+							}
+
+							if (brandLogo.complete) {
+								loaded();
+							} else {
+								brandLogo.addEventListener("load", loaded);
+								brandLogo.addEventListener(
+									"error",
+									function () {
+										alert("error");
+									}
+								);
+							}
+						} else {
+							$("#cs-content-2").css("display", "grid");
+							$("#cs-content-2-collab-logo").attr(
+								"src",
+								"assets/images/cs-logos/" +
+									tempCS.brand +
+									".svg"
+							);
+							$("#cs-content-1-collab-logo").attr(
+								"alt",
+								tempCS.brand
+							);
+
+							$("#cs-2-influencers").text(tempCS.influencers);
+							$("#cs-2-reach").text(tempCS.reach);
+							if (tempCS.platform.includes(",")) {
+								let CSMediaIcons = tempCS.platform
+									.split(",")
+									.map((item) => item.trim().toLowerCase());
+								$("#cs-2-platform").html("");
+								$("#cs-2-platform-icon").hide();
+								let CSMediaIconsMap = {
+									insta: "instagram",
+								};
+								for (i in CSMediaIcons) {
+									$("#cs-2-platform").append(
+										`<img style="height: 26px; object-fit: contain; object-position: center;" src="assets/images/cs-icons/${
+											CSMediaIconsMap[CSMediaIcons[i]] ||
+											CSMediaIcons[i]
+										}.svg">`
+									);
+									if (i + 1 < CSMediaIcons.length) {
+										$("#cs-2-platform").append(" + ");
+									}
+								}
+							} else {
+								$("#cs-2-platform-icon").show();
+								$("#cs-2-platform").text(tempCS.platform);
+							}
+							$("#cs-2-cpv").text(tempCS.cpv);
+							if (
+								tempCS.likes !== "-" ||
+								tempCS.turnaround !== "-"
+							) {
+								$("#cs-content-2-bottom-data").show();
+								$("#cs-content-2-like-count").text(
+									tempCS.likes
+								);
+								$("#cs-content-2-turnaround").text(
+									tempCS.turnaround
+								);
+							} else {
+								$("#cs-content-2-bottom-data").hide();
+							}
+
+							if (tempCS.media.includes(",")) {
+								//Multiple Images Scenario
+
+								$("#cs-mobile-videos").show();
+								$("#cs-2-image").hide();
+
+								let CSMedia = tempCS.media
+									.split(",")
+									.map((item) => item.trim());
+								let CSMediaLinks = tempCS.links
+									.split(",")
+									.map((item) => item.trim());
+
+								for (i in CSMedia) {
+									$(
+										".cs-mobile-video > .cs-mobile-video-cover"
+									)
+										.eq(i)
+										.get(0)
+										.style.setProperty(
+											"--thumbnail",
+											`url("assets/case-studies-media/${CSMedia[i]}")`
+										);
+									$("#cs-mobile-videos > a")
+										.eq(i)
+										.attr("href", CSMediaLinks[i]);
+								}
+							} else {
+								$("#cs-mobile-videos").hide();
+								$("#cs-2-image").show();
+
+								$("#cs-2-image").css(
+									"background-image",
+									`url("assets/case-studies-media/${tempCS.media}")`
+								);
+							}
+							$("#cs-content-2").css("display", "grid");
+
+							var brandLogo = document.querySelector(
+								"#cs-content-2-collab-logo"
+							);
+
+							function loaded() {
+								anime({
+									targets: ".cs-loader",
+									opacity: 0,
+									// translateY: -100,
+									duration: 400,
+									easing: "easeInOutQuad",
+									complete: () => {
+										$(".cs-loader").hide();
+									},
+								});
+								anime({
+									targets: "#cs-content-2",
+									opacity: [0, 1],
+									easing: "linear",
+									duartion: 400,
+									complete: () => {
+										inTransition = false;
+									},
+								});
+							}
+
+							if (brandLogo.complete) {
+								loaded();
+							} else {
+								brandLogo.addEventListener("load", loaded);
+								brandLogo.addEventListener(
+									"error",
+									function () {
+										alert("error");
+									}
+								);
+							}
+						}
+					},
+				});
+				currentCaseStudyIndex = CSIndex;
+				if (currentCaseStudyIndex == 0) hideArrow("up");
+				if (currentCaseStudyIndex - 1 >= 0) showArrow("up");
+				if (
+					currentCaseStudyIndex + 1 <=
+					currentCaseStudyData.length - 1
+				)
+					showArrow("down");
+				if (currentCaseStudyIndex == currentCaseStudyData.length - 1)
+					hideArrow("down");
+			}
+
+			$(".cs-type-box").click((e) => {
+				inTransition = true;
+				caseStudyCategory = $(e.target).attr("data-category");
+				currentCaseStudyData = caseStudiesData.filter(
+					(elem) => elem.category == caseStudyCategory
+				);
+				$("#cs-1-platform-icon").attr(
+					"src",
+					`assets/images/cs-icons/${caseStudyCategory.toLowerCase()}.svg`
+				);
+				$("#cs-2-platform-icon").attr(
+					"src",
+					`assets/images/cs-icons/${caseStudyCategory.toLowerCase()}.svg`
+				);
+				// $("#cs-content-1").css({
+				// 	display: "grid",
+				// 	opacity: "0",
+				// });
+				$("#cs-exit").css({
+					display: "block",
+					opacity: "0",
+				});
+				anime
+					.timeline({
+						duration: 800,
+						easing: "easeInOutQuad",
+						complete: () => {
+							inTransition = false;
+							caseStudiesOpen = true;
+							currentCaseStudyIndex = 0;
+							setCaseStudyData();
+						},
+					})
+					.add({
+						targets: [
+							"#cs-menu",
+							"#menu-icon",
+							"#logo",
+							"#menu-circle",
+							"#cta-button",
+						],
+						opacity: 0,
+						complete: (anim) => {
+							$(
+								"#cs-menu, #menu-icon, #menu-circle, #logo, #cta-button"
+							).hide();
+							setTimeout(() => {
+								snackbar("Scroll down to see more");
+							}, 1500);
+						},
+					})
+					.add(
+						{
+							targets: "#menu-icon, #menu-circle, #logo",
+							translateY: -50,
+						},
+						0
+					)
+					.add(
+						{
+							targets: "#cta-button",
+							translateY: 50,
+						},
+						0
+					)
+					.add(
+						{
+							targets: "#cs-exit",
+							translateX: [50, 0],
+							opacity: 0.7,
+						},
+						0
+					)
+					.add(
+						{
+							targets: e.target,
+							scale: 1.1,
+							complete: () => {
+								anime({
+									targets: e.target,
+									scale: 1,
+									duration: 0,
+								});
+							},
+						},
+						0
+					);
+				// .add(
+				// 	{
+				// 		targets:
+				// 			currentCaseStudyData(currentCaseStudyIndex)
+				// 				.type == "1"
+				// 				? "#cs-content-1"
+				// 				: "#cs-content-2",
+				// 		opacity: [0, 1],
+				// 		begin: () => {
+				// 			$(
+				// 				currentCaseStudyData(currentCaseStudyIndex)
+				// 					.type == "1"
+				// 					? "#cs-content-1"
+				// 					: "#cs-content-2"
+				// 			).css("display", "grid");
+				// 		},
+				// 	},
+				// 	400
+				// );
+
+				// .add({
+				// 	targets: "#cs-content-1",
+				// 	opacity: [0, 1],
+				// })
+				// .add(
+				// 	{
+				// 		targets: [
+				// 			"#cs-content-1-logos",
+				// 			"#cs-content-1-stats",
+				// 		],
+				// 		translateX: [-100, 0],
+				// 		delay: anime.stagger(100),
+				// 	},
+				// 	400
+				// )
+				// .add(
+				// 	{
+				// 		targets: "#cs-content-1-media",
+				// 		translateY: [100, 0],
+				// 	},
+				// 	400
+				// );
+			});
+
+			$(".menu-item").click(function () {
+				// Always close menu, even if clicking the same item
+				if (menuOpened) {
+					toggleMenu(true);
+				}
+
+				// Don't change sections if clicking the same item
+				if ($(this).hasClass("selected-menu-item")) return;
+
+				$(".selected-menu-item").removeClass("selected-menu-item");
+				$(this).addClass("selected-menu-item");
+				setSection($(this).attr("index"));
+			});
+
+			function showArrow(dir) {
+				if (dir == "up" && !arrowStatus.up) {
+					anime({
+						targets: "#up-arrow",
+						opacity: 0.7,
+						begin: () => {
+							$("#up-arrow").css("pointer-events", "all");
+						},
+					});
+					arrowStatus.up = true;
+				} else if (dir == "down" && !arrowStatus.down) {
+					anime({
+						targets: "#down-arrow",
+						opacity: 0.7,
+						begin: () => {
+							$("#down-arrow").css("pointer-events", "all");
+						},
+					});
+					arrowStatus.down = true;
+				}
+			}
+
+			function hideArrow(dir) {
+				if (dir == "up" && arrowStatus.up) {
+					anime({
+						targets: "#up-arrow",
+						opacity: 0,
+						complete: () => {
+							$("#up-arrow").css("pointer-events", "none");
+						},
+					});
+					arrowStatus.up = false;
+				} else if (dir == "down" && arrowStatus.down) {
+					anime({
+						targets: "#down-arrow",
+						opacity: 0,
+						complete: () => {
+							$("#down-arrow").css("pointer-events", "none");
+						},
+					});
+					arrowStatus.down = false;
+				}
+			}
+
+			$(window).bind("mousewheel", function (event) {
+				if (event.originalEvent.wheelDelta >= 0) {
+					previousSection();
+				} else {
+					nextSection();
+				}
+			});
+
+			// Use event delegation for dynamically replaced cta-button
+			$(document).on("click", "#cta-button", function (e) {
+				e.preventDefault(); // Prevent default anchor behavior
+				setSection(sectionIDs.contact);
+			});
+
+			//Adding arrow key functionalities
+			document.onkeydown = (e) => {
+				e = e || window.event;
+				if (e.keyCode == "38") previousSection();
+				else if (e.keyCode == "40") nextSection();
+			};
+
+			document.addEventListener("touchstart", handleTouchStart, false);
+			document.addEventListener("touchmove", handleTouchMove, false);
+
+			var xDown = null;
+			var yDown = null;
+
+			function getTouches(evt) {
+				return (
+					evt.touches || // browser API
+					evt.originalEvent.touches
+				); // jQuery
+			}
+
+			function handleTouchStart(evt) {
+				const firstTouch = getTouches(evt)[0];
+				xDown = firstTouch.clientX;
+				yDown = firstTouch.clientY;
+			}
+
+			function handleTouchMove(evt) {
+				// evt.preventDefault();
+				if (!xDown || !yDown) {
+					return;
+				}
+
+				var xUp = evt.touches[0].clientX;
+				var yUp = evt.touches[0].clientY;
+
+				var xDiff = xDown - xUp;
+				var yDiff = yDown - yUp;
+
+				if (Math.abs(xDiff) > Math.abs(yDiff)) {
+					/*most significant*/
+					if (xDiff > 0) {
+						/* right swipe */
+						nextSection();
+					} else {
+						/* left swipe */
+						previousSection();
+					}
+				} else {
+					if (yDiff > 0) {
+						/* down swipe */
+						nextSection();
+					} else {
+						/* up swipe */
+						previousSection();
+					}
+				}
+				/* reset values */
+				xDown = null;
+				yDown = null;
+			}
+
+			// Removed service-box click handler to prevent isolation effect and make cards non-clickable
+			// let serviceDetail = false;
+			// function toggleServiceDetail() {}
+			// $(".service-box").click(function () { /* ... removed logic ... */ });
+
+			let partnerDetail = false;
+			function togglePartnerDetail() {}
+			$("#partner-detail-button").click(function () {
+				partnerDetail = !partnerDetail;
+				togglePartnerDetail();
+			});
+
+			smcAnim = false;
+
+			$("#social-media-card").click(function () {
+				let rotate = smcAnim ? 0 : 180;
+				smcAnim = !smcAnim;
+				anime({
+					targets: "#smc-person",
+					rotate,
+					easing: "easeInOutQuad",
+					duration: 800,
+				});
+			});
+
+			$("#popup-button").click(function () {
+				popupClose();
+				if (currentSection != sectionIDs.contact)
+					setSection(sectionIDs.contact);
+			});
+
+			function setSection(section) {
+				if (inTransition) return;
+				console.log("setSection called with:", section);
+				if (typeof section == "string") section = parseInt(section);
+
+				// Don't animate if we're already on the target section
+				if (currentSection === section) {
+					console.log(
+						"Already on section",
+						section,
+						"- skipping animation"
+					);
+					return;
+				}
+
+				// Debug: Check if section exists
+				if (!sectionAnims[section]) {
+					console.error(
+						"Section not found at index:",
+						section,
+						"Array length:",
+						sectionAnims.length
+					);
+					return;
+				}
+
+				let delay = 0;
+
+				// Close menu if it's still open (for non-menu navigation like arrows/keys)
+				if (menuOpened) {
+					toggleMenu(true);
+					delay = 600;
+				}
+
+				inTransition = true;
+
+				let sectionAnim = anime.timeline({
+					easing: "easeInOutQuad",
+					duration: 1000,
+					delay,
+					begin: () => {
+						$("#section-indicator").hide(500, () => {
+							// Set new title after hide animation completes
+							$("#section-indicator").html(
+								sectionAnims[section].name
+							);
+						});
+					},
+					complete: () => {
+						$("#section-indicator").show(200);
+						inTransition = false;
+					},
+				});
+
+				let outAnim = sectionAnims[currentSection].out;
+				for (i in outAnim) {
+					if (outAnim[i].mobile && window.innerWidth <= 600) {
+						sectionAnim.add(outAnim[i].mobile, 0);
+					}
+					if (outAnim[i].pc && window.innerWidth > 600)
+						sectionAnim.add(outAnim[i].pc, 0);
+					if (!outAnim[i].mobile && !outAnim[i].mobile)
+						sectionAnim.add(outAnim[i], 0);
+				}
+				let inAnim = sectionAnims[section].in;
+				for (i in inAnim) {
+					// sectionAnim.add(inAnim[i], 0);
+					if (inAnim[i].mobile && window.innerWidth <= 600) {
+						sectionAnim.add(inAnim[i].mobile, 0);
+					}
+					if (inAnim[i].pc && window.innerWidth > 600)
+						sectionAnim.add(inAnim[i].pc, 0);
+					if (!inAnim[i].mobile && !inAnim[i].mobile)
+						sectionAnim.add(inAnim[i], 0);
+				}
+
+				currentSection = section;
+				console.log(section, currentSection);
+
+				$(".arrow").show().css("pointer-events", "all");
+				let hiddenArrow;
+				let visibleArrow;
+				if (currentSection == 0) hideArrow("up");
+				if (currentSection - 1 >= 0) showArrow("up");
+				if (currentSection + 1 <= sectionAnims.length - 1)
+					showArrow("down");
+				if (currentSection == sectionAnims.length - 1)
+					hideArrow("down");
+
+				$(".selected-menu-item").removeClass("selected-menu-item");
+				// Map section index to menu item index using sectionAnims[section].id
+				let menuIndex = sectionAnims[section].id;
+				$(`.menu-item[index="${menuIndex}"]`).addClass(
+					"selected-menu-item"
+				);
+			}
+
+			// function beginBrandsAnim() {
+			// 	setTimeout(switchBrands, 2000);
+			// 	function switchBrands() {
+			// 		let brandAnimTimeline = anime
+			// 			.timeline({
+			// 				easing: "easeInOutQuad",
+			// 			})
+			// 			.add({
+			// 				targets: Array(9)
+			// 					.fill()
+			// 					.map(
+			// 						(elem, index) =>
+			// 							`.brand-logo:nth-of-type(${
+			// 								brandsIndex[index] + 1
+			// 							})`
+			// 					),
+			// 				opacity: 0,
+			// 				complete: (anim) => {
+			// 					let targets = anim.animatables.map(
+			// 						(animatable) => animatable.target
+			// 					);
+			// 					$(targets).css("display", "none");
+			// 				},
+			// 				delay: anime.stagger(150),
+			// 				duration: 800,
+			// 			});
+
+			// 		brandsIndex = brandsIndex.map((item) =>
+			// 			item + 9 > brandsData.length - 1
+			// 				? item + 9 - brandsData.length
+			// 				: item + 9
+			// 		);
+
+			// 		brandAnimTimeline.add({
+			// 			targets: Array(9)
+			// 				.fill()
+			// 				.map(
+			// 					(elem, index) =>
+			// 						`.brand-logo:nth-of-type(${
+			// 							brandsIndex[index] + 1
+			// 						})`
+			// 				),
+			// 			opacity: [0, 1],
+			// 			begin: (anim) => {
+			// 				let targets = anim.animatables.map(
+			// 					(animatable) => animatable.target
+			// 				);
+			// 				$(targets).css("display", "block");
+			// 			},
+			// 			delay: anime.stagger(150),
+			// 			duration: 800,
+			// 		});
+			// 	}
+			// 	brandsAnimInterval = setInterval(switchBrands, 11000);
+			// }
+			$("#contact-form").submit(function (e) {
+				e.preventDefault();
+
+				// Disable submit button to prevent multiple submissions
+				$("#contact-form-button")
+					.prop("disabled", true)
+					.text("Sending...");
+
+				// Create a hidden iframe for form submission to avoid CORS
+				var iframe = document.createElement("iframe");
+				iframe.style.display = "none";
+				iframe.name = "hidden_iframe";
+				document.body.appendChild(iframe);
+
+				// Create a temporary form that submits to the iframe
+				var tempForm = document.createElement("form");
+				tempForm.action =
+					"https://docs.google.com/forms/d/e/1FAIpQLSfUyMZsQTdNOZgveKt6Z1tgeaH93FqOx5S_Mdg_h299J40hIg/formResponse";
+				tempForm.method = "POST";
+				tempForm.target = "hidden_iframe";
+				tempForm.style.display = "none";
+
+				// Add form fields - ALL fields from the actual form
+				var fields = [
+					{
+						name: "entry.944715042",
+						value: $("input[name='entry.944715042']").val(),
+					}, // Full name
+					{
+						name: "entry.568819618",
+						value: $("input[name='entry.568819618']").val(),
+					}, // Company/Brand name
+					{
+						name: "entry.428071128",
+						value: $("input[name='entry.428071128']").val(),
+					}, // Email address
+					{
+						name: "entry.1710089201",
+						value: $("input[name='entry.1710089201']").val(),
+					}, // Phone number
+					{ name: "entry.2041532504", value: "default" }, // Designation/Role
+					{
+						name: "entry.1150814884",
+						value: $("input[name='entry.1150814884']").val(),
+					}, // Website/LinkedIn
+					{
+						name: "entry.1771582786",
+						value: $("select[name='entry.1771582786']").val(),
+					}, // What are you looking for
+					{ name: "entry.1356842903", value: "default" }, // Campaign objective
+					{ name: "entry.1367004133", value: "default" }, // Target audience
+					{
+						name: "entry.1777817528",
+						value: $("select[name='entry.1777817528']").val(),
+					}, // Preferred influencer type
+					{
+						name: "entry.387667631",
+						value: $("input[name='entry.387667631']").val(),
+					}, // Estimated budget
+				];
+
+				fields.forEach(function (field) {
+					var input = document.createElement("input");
+					input.type = "hidden";
+					input.name = field.name;
+					input.value = field.value || "";
+					tempForm.appendChild(input);
+				});
+
+				document.body.appendChild(tempForm);
+				tempForm.submit();
+
+				// Clean up after a short delay
+				setTimeout(function () {
+					document.body.removeChild(tempForm);
+					document.body.removeChild(iframe);
+				}, 1000);
+
+				// Reset the form and UI
+				setTimeout(function () {
+					$("#contact-form")[0].reset();
+					$("#contact-form-button")
+						.prop("disabled", false)
+						.text("Send");
+					snackbar(
+						"Thank you! Your message has been sent successfully."
+					);
+					console.log("Form submitted to Google Forms successfully");
+				}, 500);
+			});
+		});
+
+		function creatorBoxClose(flag) {
+			if (flag) {
+				$("#creator-detail-box").hide();
+				$(".creator-box").css("height", "100%");
+				return;
+			}
+			if (inTransition) return;
+			console.log("closing box");
+			inTransition = true;
+			anime
+				.timeline({
+					easing: "easeInOutQuad",
+					complete: () => {
+						inTransition = false;
+					},
+				})
+				.add({
+					targets: ["#creator-data>*", "#creator-detail-box>*"],
+					opacity: [1, 0],
+					delay: anime.stagger(100),
+					complete: () => {
+						$("#creator-detail-box").hide();
+					},
+				})
+				.add({
+					targets: ".creator-box",
+					height: "100%",
+					delay: anime.stagger(50),
+					duration: 400,
+				});
+		}
+
+		function creatorBoxInit() {
+			if (creatorPageIndex == 0) {
+				$("#creator-page-prev").css({
+					"pointer-events": "none",
+				});
+				anime({
+					targets: "#creator-page-prev",
+					opacity: 0,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			} else {
+				$("#creator-page-prev").css({
+					"pointer-events": "auto",
+				});
+				anime({
+					targets: "#creator-page-prev",
+					opacity: 1,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			}
+			if (creatorPageIndex == creatorPages.length - 1) {
+				$("#creator-page-next").css({
+					"pointer-events": "none",
+				});
+				anime({
+					targets: "#creator-page-next",
+					opacity: 0,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			} else {
+				$("#creator-page-next").css({
+					"pointer-events": "auto",
+				});
+				anime({
+					targets: "#creator-page-next",
+					opacity: 1,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			}
+			$(".creator-box").click(function (e) {
+				// if (inTransition) return;
+				// inTransition = true;
+				// let creatorIndex = $(this).attr("index");
+				// let creator = creatorsData[creatorIndex];
+				// $("#creator-name").html(creator.name);
+				// $("#creator-detail").html(creator.detail);
+				// $("#creator-img").attr(
+				// 	"src",
+				// 	`assets/images/creators/${creator.name.toLowerCase()}.jpg`
+				// );
+				// $(".creator-link").hide();
+				// let socials = ["instagram", "youtube", "twitter", "linkedin"];
+				// socials.map((social) => {
+				// 	if (!creator[social]) return;
+				// 	$(".cl-" + social)
+				// 		.show()
+				// 		.attr("href", creator[social]);
+				// 	$(".cl-" + social + ">,social-count").html(
+				// 		creator[social + "-count"]
+				// 	);
+				// });
+				// anime
+				// 	.timeline({
+				// 		easing: "easeInOutQuad",
+				// 		complete: () => {
+				// 			inTransition = false;
+				// 		},
+				// 	})
+				// 	.add({
+				// 		targets: ".creator-box",
+				// 		height: 0,
+				// 		delay: anime.stagger(50),
+				// 		duration: 400,
+				// 	})
+				// 	.add({
+				// 		targets: ["#creator-detail-box>*", "#creator-data>*"],
+				// 		opacity: [0, 1],
+				// 		delay: anime.stagger(100),
+				// 		begin: () => {
+				// 			$("#creator-detail-box").show();
+				// 		},
+				// 	});
+				// openCreatorDetails(e);
+			});
+
+			$("#cdb-close").click(creatorBoxClose);
+		}
+
+		function moreCreatorBoxInit() {
+			if (moreCreatorPageIndex == 0) {
+				$("#creator-page-prev-2").css({
+					"pointer-events": "none",
+				});
+				anime({
+					targets: "#creator-page-prev-2",
+					opacity: 0,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			} else {
+				$("#creator-page-prev-2").css({
+					"pointer-events": "auto",
+				});
+				anime({
+					targets: "#creator-page-prev-2",
+					opacity: 1,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			}
+			if (moreCreatorPageIndex == moreCreatorPages.length - 1) {
+				$("#creator-page-next-2").css({
+					"pointer-events": "none",
+				});
+				anime({
+					targets: "#creator-page-next-2",
+					opacity: 0,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			} else {
+				$("#creator-page-next-2").css({
+					"pointer-events": "auto",
+				});
+				anime({
+					targets: "#creator-page-next-2",
+					opacity: 1,
+					duration: 400,
+					easing: "easeInOutQuad",
+				});
+			}
+		}
+
+		function snackbar(text) {
+			var x = document.getElementById("snackbar");
+			x.innerText = text;
+
+			x.className = "show";
+
+			setTimeout(function () {
+				x.className = x.className.replace("show", "");
+			}, 3500);
+		}
+
+		$(document).ready(function () {
+			console.log("Document ready - initializing detail card");
+
+			// Handle click on ab4-li items
+			$(".ab4-li").on("click", function () {
+				console.log("ab4-li clicked");
+				if (inTransition) return;
+				inTransition = true;
+				console.log("Not in transition, proceeding");
+
+				const title = $(this).data("title");
+				const detail = $(this).data("detail");
+				console.log("Showing detail:", title);
+
+				$("#ab4-detail-title").text(title);
+				$("#ab4-detail-text").text(detail);
+
+				// Show overlay with proper CSS classes
+				$("#ab4-detail-overlay")
+					.addClass("active")
+					.css("display", "flex");
+
+				anime
+					.timeline({
+						easing: "easeInOutQuad",
+						complete: () => {
+							console.log("Animation complete");
+							inTransition = false;
+						},
+					})
+					.add({
+						targets: "#ab4-detail-card",
+						opacity: [0, 1],
+						scale: [0.8, 1],
+						duration: 600,
+					});
+			});
+
+			// Handle closing the detail card - close button
+			$("#ab4-detail-close").on("click", function (e) {
+				e.stopPropagation();
+				closeDetailOverlay();
+			});
+
+			// Handle closing the detail card - backdrop click
+			$("#ab4-detail-overlay").on("click", function (e) {
+				if (e.target === this) {
+					closeDetailOverlay();
+				}
+			});
+
+			// Close overlay function
+			function closeDetailOverlay() {
+				console.log("Closing detail card");
+				if (inTransition) return;
+				inTransition = true;
+
+				anime
+					.timeline({
+						easing: "easeInOutQuad",
+						complete: () => {
+							console.log("Close animation complete");
+							$("#ab4-detail-overlay").removeClass("active");
+							inTransition = false;
+						},
+					})
+					.add({
+						targets: "#ab4-detail-card",
+						opacity: [1, 0],
+						scale: [1, 0.8],
+						duration: 400,
+					});
+			}
+
+			// Close overlay with Escape key
+			$(document).on("keydown", function (e) {
+				if (
+					e.key === "Escape" &&
+					$("#ab4-detail-overlay").hasClass("active")
+				) {
+					closeDetailOverlay();
+				}
+			});
+		});
+
+		var ab5Slider = new Swiper(".ab5-slider", {
+			loop: true,
+			effect: "slide", // Changed from 'cards'
+			grabCursor: false, // Changed from true
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			// Removed cardsEffect as it's no longer relevant with effect: 'slide'
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+		});
+
+		$(document).ready(function () {
+			$.ajax({
+				url: "data/brands.csv",
+				dataType: "text",
+			}).done(function (data) {
+				var allRows = data.split(/\r?\n|\r/);
+				var brandsToDisplay = [];
+
+				for (var i = 1; i < allRows.length; i++) {
+					var rowCells = allRows[i].split(",");
+					if (rowCells[1] && rowCells[1].trim() === "TRUE") {
+						var brandName = rowCells[0].trim();
+						brandsToDisplay.push(brandName);
+					}
+				}
+
+				// Populate top marquee
+				var marqueeTopContent = $(
+					"#brands .marquee-top .marquee-content"
+				);
+				brandsToDisplay.forEach(function (brandName, i) {
+					if (i % 2 !== 0) return;
+					var img = $("<img>")
+						.addClass("brand-logo")
+						.attr(
+							"src",
+							"assets/images/brands-new/colored/" +
+								brandName.toLowerCase() +
+								".png"
+						)
+						.attr("alt", brandName);
+					marqueeTopContent.append(img);
+				});
+				// Clone content for seamless loop
+				marqueeTopContent.html(
+					marqueeTopContent.html() + marqueeTopContent.html()
+				);
+
+				// Populate bottom marquee
+				var marqueeBottomContent = $(
+					"#brands .marquee-bottom .marquee-content"
+				);
+				brandsToDisplay.forEach(function (brandName, i) {
+					if (i % 2 == 0) return;
+					var img = $("<img>")
+						.addClass("brand-logo")
+						.attr(
+							"src",
+							"assets/images/brands-new/colored/" +
+								brandName.toLowerCase() +
+								".png"
+						)
+						.attr("alt", brandName);
+					marqueeBottomContent.append(img);
+				});
+				// Clone content for seamless loop
+				marqueeBottomContent.html(
+					marqueeBottomContent.html() + marqueeBottomContent.html()
+				);
+			});
+		});
+	</script>
+</html>
